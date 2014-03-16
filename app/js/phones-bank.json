@@ -1,5 +1,6 @@
 {
-  "motorola-xoom-with-wi-fi" :{
+  "motorola-xoom-with-wi-fi" : [
+  {
     "android": {
         "os": "Android 3.0", 
         "ui": "Honeycomb"
@@ -31,9 +32,11 @@
         ], 
         "weight": "708.0 grams"
     }
-  },
+  }
+  ],
 
-  "motorola-xoom" : {
+  "motorola-xoom" : [
+  {
     "android": {
         "os": "Android 3.0", 
         "ui": "Android"
@@ -58,4 +61,5 @@
         "weight": "726.0 grams"
     }
   }
+  ]
 }
