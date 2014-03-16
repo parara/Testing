@@ -1,0 +1,33 @@
+{
+    "android": {
+        "os": "Android 3.0", 
+        "ui": "Honeycomb"
+    }, 
+    "availability": [
+        ""
+    ], 
+    "description": "Motorola XOOM with Wi-Fi has a super-powerful dual-core processor and Android\u2122 3.0 (Honeycomb) \u2014 the Android platform designed specifically for tablets. With its 10.1-inch HD widescreen display, you\u2019ll enjoy HD video in a thin, light, powerful and upgradeable tablet.", 
+    "display": {
+        "screenResolution": "WXGA (1200 x 800)", 
+        "screenSize": "10.1 inches", 
+        "touchScreen": true
+    }, 
+    "id": "motorola-xoom-with-wi-fi", 
+    "images": [
+        "img/phones/motorola-xoom-with-wi-fi.0.jpg", 
+        "img/phones/motorola-xoom-with-wi-fi.1.jpg", 
+        "img/phones/motorola-xoom-with-wi-fi.2.jpg", 
+        "img/phones/motorola-xoom-with-wi-fi.3.jpg", 
+        "img/phones/motorola-xoom-with-wi-fi.4.jpg", 
+        "img/phones/motorola-xoom-with-wi-fi.5.jpg"
+    ], 
+    "name": "Motorola XOOM\u2122 with Wi-Fi", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "249.1 mm (w)", 
+            "167.8 mm (h)", 
+            "12.9 mm (d)"
+        ], 
+        "weight": "708.0 grams"
+    }
+}

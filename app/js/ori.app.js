@@ -20,7 +20,6 @@ phonecatApp.config(['$routeProvider',
       otherwise({
         redirectTo: '/phones'
       });
-      $locationProvider.html5Mode(true);
   }]);
 
 phonecatApp.controller('PhoneListCtrl', ['$scope',

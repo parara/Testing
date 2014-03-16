@@ -1,8 +1,10 @@
-/*'use strict';
+'use strict';
+
+/* Controllers */
 
 var phonecatControllers = angular.module('phonecatControllers', []);
 
-phonecatControllers.controller('PhoneListCtrl', ['$scope', '$http',
+phonecatControllers.controller('PhoneListCtrl', ['$scope',
   function($scope) {
     $scope.phones = [
     {
@@ -22,36 +24,13 @@ phonecatControllers.controller('PhoneListCtrl', ['$scope', '$http',
     ];
 
     $scope.orderProp = 'age';
+    $scope.message = 'This is Add new order screen';
   }]);
-
-// ini gmna?
+//hijaking file
 phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {
     $http.get('phones/' + $routeParams.phoneId + '.json').success(function(data) {
       $scope.phone = data;
     });
-  }]);
-
-*/
-
-'use strict';
-
-/* Controllers */
-
-var phonecatControllers = angular.module('phonecatControllers', []);
-
-phonecatControllers.controller('PhoneListCtrl', ['$scope', '$http',
-  function($scope, $http) {
-    $http.get('js/phones.json').success(function(data) {
-      $scope.phones = data;
-    });
-
-    $scope.orderProp = 'age';
-  }]);
-
-phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http',
-  function($scope, $routeParams, $http) {
-    $http.get('phones/' + $routeParams.phoneId + '.json').success(function(data) {
-      $scope.phone = data;
-    });
-  }]);
+  }
+]);

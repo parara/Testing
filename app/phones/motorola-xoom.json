@@ -1,0 +1,25 @@
+{
+    "android": {
+        "os": "Android 3.0", 
+        "ui": "Android"
+    }, 
+    "availability": [
+        "Verizon"
+    ],
+    "description": "MOTOROLA XOOM has a super-powerful dual-core processor and Android\u2122 3.0 (Honeycomb) \u2014 the Android platform designed specifically for tablets. With its 10.1-inch HD widescreen display, you\u2019ll enjoy HD video in a thin, light, powerful and upgradeable tablet.",
+    "id": "motorola-xoom", 
+    "images": [
+        "img/phones/motorola-xoom.0.jpg", 
+        "img/phones/motorola-xoom.1.jpg", 
+        "img/phones/motorola-xoom.2.jpg"
+    ], 
+    "name": "MOTOROLA XOOM\u2122", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "249.0 mm (w)", 
+            "168.0 mm (h)", 
+            "12.7 mm (d)"
+        ], 
+        "weight": "726.0 grams"
+    }
+}
