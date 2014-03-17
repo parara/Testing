@@ -1,21 +1,25 @@
 'use strict';
 
-/* App Module */
+/* App Module 
+Change
+phonecatApp => WarsiApp
+phonecatControllers => WarsiCtr
+*/
 
-var phonecatApp = angular.module('phonecatApp', [
+var WarsiApp = angular.module('WarsiApp', [
   'ngRoute',
-  'phonecatControllers'
+  'WarsiCtr'
 ]);
 
-phonecatApp.config(['$routeProvider',
+WarsiApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/phones', {
-        templateUrl: 'phone-list.html',
+        templateUrl: 'app-list.html',
         controller: 'PhoneListCtrl'
       }).
       when('/phones/:phoneId', {
-        templateUrl: 'phone-detail.html',
+        templateUrl: 'app-detail.html',
         controller: 'PhoneDetailCtrl'
       }).
       otherwise({

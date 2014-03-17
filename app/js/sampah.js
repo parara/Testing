@@ -1,3 +1,7 @@
+phonecatApp
+phonecatControllers
+
+
 //hijaking file
 phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http',
   function($scope, $routeParams, $http) {

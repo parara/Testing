@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="phonecatApp">
+<html lang="en" ng-app="WarsiApp">
 <head>
   <meta charset="utf-8">
   <title>Google Phone Gallery</title>
@@ -11,12 +11,11 @@
 
   <div ng-view></div>
 
-  <script type="text/ng-template" id="phone-list.html">
+  <script type="text/ng-template" id="app-list.html">
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span2">
           <!--Sidebar content-->
-          {{message}} + ini pesan</br>
 
           Search: <input ng-model="query">
           Sort by:
@@ -42,12 +41,7 @@
     </div>
   </script>
 
-  <script type="text/ng-template" id="phone-detail.html">
-    
- {{phone.id}}</br>
-  {{phone.konten.name}}
-
-
+  <script type="text/ng-template" id="app-detail.html">
     <img ng-src="{{phone.konten.images[0]}}" class="phone">
     <h1>{{phone.konten.name}}</h1>
     <p>{{phone.konten.description}}</p>

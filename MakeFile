@@ -1,0 +1,4 @@
+##--pkg webkit-1.0
+valac main.vala page.vala app.vala util.vala \
+	--pkg webkitgtk-3.0 --pkg gtk+-3.0 --pkg glib-2.0 --pkg libsoup-2.4 \
+	--pkg javascriptcore --thread --vapidir=./vapi --header=./vapi/warung.h --vapi=./vapi/warung.vapi -X -I/usr/include/webkitgtk-3.0
