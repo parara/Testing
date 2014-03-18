@@ -14,17 +14,36 @@ var WarsiApp = angular.module('WarsiApp', [
 WarsiApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/home', {
+      when('/home', { //done
         templateUrl: 'home.html',
-        controller: 'AppListCtrl'
+        controller: 'AppListCtr'
       }).
-      when('/home/kategori', {
-        templateUrl: 'app-list.html',
-        controller: 'AppListCtrl'
+      when('/kategori', { //done
+        templateUrl: 'kategori.html'
       }).
-      when('/home/kategori/:appId', {
+      when('/repo', { //done
+        templateUrl: 'repo.html',
+        controller: 'RepoCtr'
+      }).
+      when('/kategori/aksesoris', { //done
+        templateUrl: 'aksesoris.html',
+        controller: 'AppListCtr'
+      }).
+      when('/kategori/internet', { //done
+        templateUrl: 'internet.html',
+        controller: 'AppListCtr'
+      }).
+      when('/kategori/office', { //done
+        templateUrl: 'office.html',
+        controller: 'AppListCtr'
+      }).
+      when('/kategori/audio', { //done
+        templateUrl: 'audio.html',
+        controller: 'AppListCtr'
+      }).
+      when('/detail/:appId', { //done
         templateUrl: 'app-detail.html',
-        controller: 'PhoneDetailCtrl'
+        controller: 'AppDetailCtr'
       }).
       otherwise({
         redirectTo: '/home'
