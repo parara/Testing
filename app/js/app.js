@@ -16,11 +16,11 @@ WarsiApp.config(['$routeProvider',
     $routeProvider.
       when('/home', {
         templateUrl: 'home.html',
-        controller: 'PhoneListCtrl'
+        controller: 'AppListCtrl'
       }).
       when('/home/kategori', {
         templateUrl: 'app-list.html',
-        controller: 'PhoneListCtrl'
+        controller: 'AppListCtrl'
       }).
       when('/home/kategori/:appId', {
         templateUrl: 'app-detail.html',

@@ -162,9 +162,10 @@
   </div>
 </footer>
 
-<!-- Script
-================================================== -->
-  
+<!-- Kumpulan Script -->
+
+<!-- Script Home
+================================================== -->  
   <script type="text/ng-template" id="home.html">
     <div class="container-fluid">
       <div class="row-fluid">
@@ -173,8 +174,25 @@
         </div>
       </div>
     </div>
+    <div class="bs-docs-section">
+      <h2 align="center" id="overview" class="page-header">Selayang Pandang</h2>
+      <p><i>Apa yang baru di BlankOn Suroboyo..</i></p>
+      <p></p>
+    </div>
+
+    <!-- Aplikasi
+    ================================================== -->
+    <div class="bs-docs-section" ng-controller="AppListCtrl">
+      <h2 align="center" id="deret" class="page-header">Pilihan Aplikasi</h2>
+      <p><i>Beragam aplikasi yang bisa dipasang hanya dengan satu tombol..</i></p>
+      <dev ng-repeat="app in apps | filter:filters">
+        <img ng-src="{{app.imageUrl}}">
+      </dev>
+    </div>       
   </script>
 
+<!-- Script Kategori
+================================================== -->  
   <script type="text/ng-template" id="app-list.html">
     <div class="container-fluid">
       <div class="row-fluid">
@@ -192,6 +210,8 @@
     </div>
   </script>
 
+<!-- Script Detail Aplikasi
+================================================== --> 
   <script type="text/ng-template" id="app-detail.html">
     <img ng-src="{{app.konten.images[0]}}">
     <h1>{{app.konten.name}}</h1>

@@ -45,7 +45,7 @@ WarsiCtr.factory('DaftarApp', function() {
   };
 });
 
-WarsiCtr.controller('PhoneListCtrl', ['$scope', 'DaftarApp',
+WarsiCtr.controller('AppListCtrl', ['$scope', 'DaftarApp',
   function($scope, DaftarApp) {
     $scope.apps = DaftarApp.name;
     $scope.orderProp = 'age';
