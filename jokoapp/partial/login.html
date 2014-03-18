@@ -1,0 +1,63 @@
+<style type="text/css">
+input[type="text"], input[type="password"]{
+    font-size: 2em;
+    min-height: 40px;
+    background-color: transparent;
+}
+
+input[type="text"]:focus,
+input[type="text"]:hover, 
+input[type="password"]:focus,
+input[type="password"]:hover{
+    background-color: transparent;
+}
+</style>
+<div jofade>
+    <div id="nav-bar" class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">          
+          <div class="brand">
+            <h2><img style="display: inline" src="img/logo.png" class="rounded" width="32px" height="32px" /> <b>Login</b></h2></div>
+        </div>
+      </div>
+    </div>
+   <ng-include src="'partial/pesan.html'"></ng-include>
+   <ng-include src="'partial/custom_message.html'"></ng-include>
+    <div class="span4"></div>
+    <div style="padding :5%;" class="span4">
+        <form name="form">
+            <div class="control-group">
+                <div class="controls">
+                <input 
+                	required
+                	type="text" 
+                    name="username"
+                	class="input-block-level clean-input" 
+                	ng-model="username"
+                	placeholder="NIM">
+                </div>
+                <br/>
+                <div class="controls">
+                <input 
+                	required
+                	type="password"
+                    name="password"
+                	class="input-block-level clean-input"
+                	ng-model="password" 
+                	placeholder="Password">
+                </div>
+                <br/>
+                <button class="btn btn-large btn-block btn-primary"
+                    id="btlogin"
+                    style="height:40px"
+                	ng-disabled="form.$invalid" 
+                	type="button" 
+                	ng-click="login()">
+                	<h3>Login</h3>
+                </button>
+                
+            </div>
+
+        </form>
+    </div>
+</div>

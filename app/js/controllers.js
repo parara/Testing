@@ -47,7 +47,7 @@ WarsiCtr.factory('DaftarApp', function() {
 
 WarsiCtr.controller('PhoneListCtrl', ['$scope', 'DaftarApp',
   function($scope, DaftarApp) {
-    $scope.phones = DaftarApp.name;
+    $scope.apps = DaftarApp.name;
     $scope.orderProp = 'age';
   }
 ]);
@@ -55,13 +55,13 @@ WarsiCtr.controller('PhoneListCtrl', ['$scope', 'DaftarApp',
 // hack cors | where the json
 WarsiCtr.controller('PhoneDetailCtrl', ['$scope', '$routeParams','DaftarApp',
   function($scope, $routeParams, DaftarApp) {
-    $scope.user = $routeParams.phoneId;
+    $scope.user = $routeParams.appId;
     $scope.isis = DaftarApp.name;
-    $scope.phones = "";
+    $scope.apps = "";
     var itemSelected =  _.find($scope.isis,function(item){
-      return item.id === $routeParams.phoneId;
+      return item.id === $routeParams.appId;
     });
     console.info(itemSelected);
-    $scope.phone = itemSelected;
+    $scope.app = itemSelected;
   }
 ]);

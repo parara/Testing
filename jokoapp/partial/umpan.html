@@ -1,0 +1,40 @@
+<script type="text/javascript">
+   // $(function(){
+      //  $("textarea").autosize();
+    //});
+</script>
+<ng-include ng-controller="HeaderCtrl" ng-hide="hideMenu" src="'partial/header.html'"></ng-include>
+<ng-include src="'partial/pesan.html'"></ng-include>
+<ng-include src="'partial/custom_message.html'"></ng-include>
+<div jofade class="span12 main-content">
+    <div class="title"><h3>{{title}}</h3></div><br/><br/>
+     <pre class="prettyprint">Kritik dan Saran Pengguna</pre>
+     <textarea id="tx_umpan" rows="5" class="input-block-level animated" style="overflow: hidden;z-index:0" ng-model="isi"></textarea>
+    <pre class="prettyprint">Sistem</pre>
+    <div>
+    	<h3>Platform</h3>
+    	<h4>{{device_platform}}</h4>
+    	<hr>
+
+    	<h3>Model</h3>
+    	<h4>{{device_model}}</h4>
+    	<hr>
+
+    	<h3>Versi</h3>
+    	<h4>{{device_version}}</h4>
+    	<hr>
+
+    </div>
+    <div id="nav-bar-bottom" class="navbar navbar-fixed-bottom">
+	  <div class="navbar-inner">
+	    <div class="container">          
+	      	<div class="brand">
+	            <button id="bt_umpan" class="win-command2" ng-click="kirim()">
+	                  <span class="win-commandimage2 win-commandring">&#xe03c;</span>
+	            </button>
+		            
+	    	</div>
+	    </div>
+	  </div>
+	</div>
+</div>

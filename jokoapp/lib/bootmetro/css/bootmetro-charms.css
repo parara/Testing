@@ -1,0 +1,139 @@
+﻿/* charms */
+#charms {
+   background-color: #004D60;
+   position: fixed;
+   top: 0%;
+   right: 0%;
+   width: 320px;
+   max-width: 90%;
+   min-height: 100% ;
+   padding: 0;
+   margin: 0;
+   display: none;
+   z-index: 100;
+}
+   #charms .charms-section {
+      margin: 0 10px 10px 10px;
+   }
+
+   #charms .charms-header {
+      position: relative;
+      padding: 40px 0 10px 0;
+   }
+      #charms .charms-header a.win-command span.win-commandimage.win-commandring,
+      #charms .charms-header a.win-command {
+      font-size: 20px;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      vertical-align: top;
+   }
+      #charms .charms-header h2 {
+         display: inline-block;
+         color: #FFF;
+         margin-left: 10px;
+      }
+
+      #charms a.win-command {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+   }
+   #charms .charms-header a#pin-charms {
+      color: #FFF;
+      font-size: 11px;
+      height: 20px;
+      position: absolute;
+      right: 2px;
+      text-align: center;
+      top: 2px;
+      width: 20px;
+      margin-right: -24px;
+   }
+   #charms .charms-header a#pin-charms.active {
+      background-color: #FFF;
+      -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+              border-radius: 50%;
+      color: #000;
+   }
+
+
+#charms-body {
+   min-width: 350px;
+}
+
+
+#charms h2,
+#charms h3,
+#charms h4,
+#charms p,
+#charms a,
+#charms label {color: #19BFC9;}
+#charms a:hover {background-color: #216475}
+
+#charms hr {border: 1px solid #357281}
+
+
+/* transictions */
+#charms.slide {
+  right: -320px;
+  -webkit-transition: 0.6s ease-in-out left;
+     -moz-transition: 0.6s ease-in-out left;
+      -ms-transition: 0.6s ease-in-out left;
+       -o-transition: 0.6s ease-in-out left;
+          transition: 0.6s ease-in-out left;
+}
+
+#charms.slide.in { right: 0;}
+
+
+.ui-widget-overlay { background: #aaaaaa; opacity: .3;filter:Alpha(Opacity=30); }
+.app_header{
+   position: fixed;
+   z-index: 10;
+}
+
+
+
+.jo-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+  background-color: #000000;
+}
+
+.jo-backdrop.fade {
+  opacity: 0;
+}
+
+.jo-backdrop,
+.jo-backdrop.fade.in {
+  opacity: 0.1;
+  filter: alpha(opacity=80);
+}
+
+.jo-ajax {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+  background-color: #000000;
+}
+
+.jo-ajax.fade {
+  opacity: 0;
+}
+
+.jo-ajax,
+.jo-ajax.fade.in {
+  opacity: 0;
+  filter: alpha(opacity=80);
+}

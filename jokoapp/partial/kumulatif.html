@@ -1,0 +1,100 @@
+<ng-include ng-controller="HeaderCtrl" ng-hide="hideMenu" src="'partial/header.html'"></ng-include>
+<div jofade class="span12 main-content">
+  <ng-include src="'partial/pesan.html'"></ng-include>
+  <ng-switch on="detail">
+      <div ng-switch-when="1">
+         <button class="win-command" ng-click="back()">
+            <span class="win-commandimage win-commandring">&#xe05d;</span>
+         </button>
+         <span style="font-size:150%">{{title}}</span>
+       </div>
+       <div ng-switch-when="0">
+          <span class="title" style="font-size:150%">{{title}}</span>
+       </div>      
+  </ng-switch>
+
+  <ng-switch on="detail">
+    <div ng-switch-when="0">
+      <br/><br/>
+      <form class="form-search">
+          <b>Pencarian : </b>
+          <div class="input-append">
+           <input id="prependedInput" type="text" placeholder="Nama Mata Kuliah" 
+           ng-model="parameter.query">
+           <span class="add-on"><i class="icon-search-2"></i></span>
+         </div>
+      </form>
+      <table id="tbl_kumulatif" jofade class="table table-hover">
+       <caption><b>KHS Kumulatif Mahasiswa</b></caption>
+       <thead>
+         <tr>
+           <th>Matakuliah</th>
+           <th>SKS</th>
+           <th>NILAI</th>
+           <th>#</th>
+         </tr>
+       </thead>
+       <tbody ng-repeat="item in data | filter:parameter.query | orderBy:NM_MK">
+         <tr ng-dblclick="showDetail($index)">
+           <td>{{item.NM_MK}}</td>
+           <td>{{item.SKS}}</td>
+           <td>{{item.NILAI}}</td>
+           <td><a class="icon-search-2" ng-click="showDetail($index)"></a></td>
+         </tr>
+       </tbody>
+      </table>
+      <br/>
+      <table>
+        <tr>
+          <td><b>Jumlah Mata Kuliah</b></td>
+          <td> : </td>
+          <td><b>{{jmlmakul}}</b></td>
+        </tr>
+        <tr>
+          <td><b>Jumlah SKS</b></td>
+          <td> : </td>
+          <td><b>{{jmlsks}}</b></td>
+        </tr>
+        <tr>
+          <td><b>Nilai IP</b></td>
+          <td> : </td>
+          <td><b>{{ipk}}</b></td>
+        </tr>
+      </table>
+    </div> 
+
+    <div jofade ng-switch-when="1">
+       <table class="table table-striped table-bordered">
+          <tr>
+            <td>Kode Kur</td><td>{{detailData.KD_KUR}}</td>
+          </tr>
+          <tr>
+            <td>Kode MK</td><td>{{detailData.KD_MK}}</td>
+          </tr>
+          <tr>
+            <td>Mata Kuliah</td><td>{{detailData.NM_MK}}</td>
+          </tr>
+          <tr>
+            <td>Jenis MK</td><td>{{detailData.NM_JENIS_MK}}</td>
+          </tr>
+          <tr>
+            <td>SKS</td><td>{{detailData.SKS}}</td>
+          </tr>
+          <tr>
+            <td>NILAI</td><td>{{detailData.NILAI}}</td>
+          </tr>
+          <tr>
+            <td>Ulang</td><td></td>
+          </tr>
+          <tr>
+            <td>Bobot</td><td>{{detailData.BOBOT_NILAI}}</td>
+          </tr>
+          <tr>
+            <td>Paket Semester</td><td>{{detailData.SEMESTER_PAKET}}</td>
+          </tr>
+       </table>
+
+    </div>
+  </ng-switch>
+
+</div>

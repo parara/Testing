@@ -14,16 +14,20 @@ var WarsiApp = angular.module('WarsiApp', [
 WarsiApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/phones', {
+      when('/home', {
+        templateUrl: 'home.html',
+        controller: 'PhoneListCtrl'
+      }).
+      when('/home/kategori', {
         templateUrl: 'app-list.html',
         controller: 'PhoneListCtrl'
       }).
-      when('/phones/:phoneId', {
+      when('/home/kategori/:appId', {
         templateUrl: 'app-detail.html',
         controller: 'PhoneDetailCtrl'
       }).
       otherwise({
-        redirectTo: '/phones'
+        redirectTo: '/home'
       });
   }
 ]);

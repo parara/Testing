@@ -1,0 +1,60 @@
+<ng-include ng-controller="HeaderCtrl" ng-hide="hideMenu" src="'partial/header.html'"></ng-include>
+<div jofade class="span12 main-content">
+  <ng-include src="'partial/pesan.html'"></ng-include>
+  <ng-switch on="detail">
+      <div ng-switch-when="1">
+       <button class="win-command" ng-click="back()">
+          <span class="win-commandimage win-commandring">&#xe05d;</span>
+       </button>
+       <span style="font-size:150%">{{title}}</span>
+       </div>
+       <div ng-switch-when="0">
+       <span class="title" style="font-size:150%">{{title}}</span>
+       </div>      
+    </ng-switch>
+
+<ng-switch on="detail">
+    <div ng-switch-when="0">
+      <br/><br/>
+      <table id="tbl_sejarahip" jofade class="table table-hover">
+       <caption><b>Sejarah IP per Semester</b></caption>
+       <thead>
+         <tr>
+           <th>Tahun Ajaran</th>
+           <th>Semester</th>
+           <th>IP</th>
+           <th>#</th>
+         </tr>
+       </thead>
+       <tbody ng-repeat="item in data">
+         <tr ng-dblclick="showDetail($index)">
+           <td>{{item.TA}}</td>
+           <td>{{item.NM_SMT}}</td>
+           <td>{{item.IP}}</td>
+           <td><a class="icon-search-2" ng-click="showDetail($index)"></a></td>
+         </tr>
+       </tbody>
+      </table>
+    </div> 
+
+    <div jofade ng-switch-when="1">
+       <table class="table table-strIPed table-bordered">
+          <tr>
+            <td>Tahun Ajaran</td><td>{{detailData.TA}}</td>
+          </tr>
+          <tr>
+            <td>Semester</td><td>{{detailData.NM_SMT}}</td>
+          </tr>
+          <tr>
+            <td>Jatah SKS</td><td>{{detailData.JATAH_SKS}}</td>
+          </tr>
+          <tr>
+            <td>Ambil SKS</td><td>{{detailData.AMBIL_SKS}}</td>
+          </tr>
+          <tr>
+            <td>IP</td><td>{{detailData.IP}}</td>
+          </tr>
+       </table>
+    </div>
+  </ng-switch>
+</div>

@@ -2,80 +2,89 @@
 <html lang="en" ng-app="WarsiApp">
 <head>
   <meta charset="utf-8">
-  <title>Google Phone Gallery</title>
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Warung Aplikasi, Sedia software untuk BlankOn Linux">
+    <meta name="keywords" content="HTML, CSS, JS, JavaScript, Vala, Webkit, BlankOn, Package, Manager, WarSi">
+    <meta name="author" content="Estu Fardani <andro.medh4@gmail.com>">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>WarSi | Warung Aplikasi BlankOn</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/docs.min.css" rel="stylesheet">
+    <link href="css/xeditable.css" rel="stylesheet">
   
 </head>
 <body>
 
   <div ng-view></div>
+  <script type="text/ng-template" id="home.html">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span10">
+          <ul>
+            <li ng-repeat="app in apps | filter:query" class="thumbnail">
+              <a href="#/home/kategori/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}"></a>
+              <a href="#/home/kategori/{{app.id}}">{{app.name}}</a>
+              <p>{{app.snippet}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </script>
 
   <script type="text/ng-template" id="app-list.html">
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span2">
-          <!--Sidebar content-->
-
-          Search: <input ng-model="query">
-          Sort by:
-          <select ng-model="orderProp">
-            <option value="name">Alphabetical</option>
-            <option value="age">Newest</option>
-          </select>
-
-        </div>
         <div class="span10">
-          <!--Body content-->
-
-          <ul class="phones">
-            <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
-              <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
-              <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-              <p>{{phone.snippet}}</p>
+          <ul>
+            <li ng-repeat="app in apps | filter:query" class="thumbnail">
+              <a href="#/home/kategori/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}"></a>
+              <a href="#/home/kategori/{{app.id}}">{{app.name}}</a>
+              <p>{{app.snippet}}</p>
             </li>
           </ul>
-
         </div>
       </div>
     </div>
   </script>
 
   <script type="text/ng-template" id="app-detail.html">
-    <img ng-src="{{phone.konten.images[0]}}" class="phone">
-    <h1>{{phone.konten.name}}</h1>
-    <p>{{phone.konten.description}}</p>
-
-    <ul class="phone-thumbs">
-      <li ng-repeat="img in phone.konten.images">
+    <img ng-src="{{app.konten.images[0]}}">
+    <h1>{{app.konten.name}}</h1>
+    <p>{{app.konten.description}}</p>
+    <ul>
+      <li ng-repeat="img in app.konten.images">
         <img ng-src="{{img}}">
       </li>
     </ul>
-
     <ul class="specs">
       <li>
         <span>Availability and Networks</span>
         <dl>
           <dt>Availability</dt>
-          <dd ng-repeat="availability in phone.availability">{{availability}}</dd>
+          <dd ng-repeat="availability in app.availability">{{availability}}</dd>
         </dl>
       </li>
       <li>
         <span>Android</span>
         <dl>
           <dt>OS Version</dt>
-          <dd>{{phone.android.os}}</dd>
+          <dd>{{app.android.os}}</dd>
           <dt>UI</dt>
-          <dd>{{phone.android.ui}}</dd>
+          <dd>{{app.android.ui}}</dd>
         </dl>
       </li>
       <li>
         <span>Size and Weight</span>
         <dl>
           <dt>Dimensions</dt>
-          <dd ng-repeat="dim in phone.sizeAndWeight.dimensions">{{dim}}</dd>
+          <dd ng-repeat="dim in app.sizeAndWeight.dimensions">{{dim}}</dd>
           <dt>Weight</dt>
-          <dd>{{phone.sizeAndWeight.weight}}</dd>
+          <dd>{{app.sizeAndWeight.weight}}</dd>
         </dl>
       </li>
     </ul>
@@ -85,7 +94,7 @@
   <script src="lib/angular.js"></script>
   <script src="lib/angular-route.js"></script>
   <script src="lib/underscore.js"></script>
-
+<!-- app -->
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
 

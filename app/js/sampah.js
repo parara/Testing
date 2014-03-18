@@ -1,3 +1,47 @@
+  <script type="text/ng-template" id="home.html">
+//<!-- Docs master nav header
+//================================================== -->
+  <a class="sr-only" href="#content">Skip to main content</a>
+
+  <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#home">Warung Aplikasi</a>
+      </div>
+
+
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav navbar-right nav-tabs">
+          <li><a href="#home" data-toggle="tab">Muka</a></li>
+          <li><a href="#kategori" data-toggle="tab">Kategori</a></li>
+          <li><a href="#repo" data-toggle="tab">Repository</a></li>
+        </ul>
+        <form class="navbar-form navbar-right col-md-3" ng-controller="WarsiList">
+          <input type="text" ng-model="selected" typeahead="deret for deret in derets | filter:$viewValue" class="form-control input-normal" placeholder="Pencarian...">
+        </form>
+      </nav>
+    </div>
+  </header>
+
+//<!-- Docs page layout
+//================================================== -->
+    <div class="bs-docs-header" id="content">
+      
+      <div class="container">
+          <center><h2>BlankOn Linux</h2>
+          100% buatan Putra-Putri Indonesia.
+          </center>
+      </div>
+    </div>
+  </script>
+
+
 phonecatApp
 phonecatControllers
 

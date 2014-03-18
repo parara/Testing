@@ -1,0 +1,163 @@
+<ng-include ng-controller="HeaderCtrl" ng-hide="hideMenu" src="'partial/header.html'"></ng-include>
+<div jofade class="span12 main-content">
+  <ng-include src="'partial/pesan.html'"></ng-include>
+  <ng-switch on="detail">
+      <div ng-switch-when="1">
+       <button class="win-command" ng-click="back()">
+          <span class="win-commandimage win-commandring">&#xe05d;</span>
+       </button>
+       		<span style="font-size:150%">{{title}}</span>
+       </div>
+       <div ng-switch-when="0">
+       		<span class="title" style="font-size:150%">{{title}}</span>
+       </div>      
+    </ng-switch>
+
+   <ng-switch on="detail">
+    <div ng-switch-when="0">
+	 <form>
+	     <fieldset>
+	           <div class="control-group">
+	            <div class="controls">
+	            <label>Tahun Ajaran</label>
+	             <select
+	              	required
+	                ng-model="parameter.tahun"
+	                name="ta"
+	                class="input-large"
+	                ng-Change="reset()"
+	                ng-options="v.value as v.label for v in l_tahun">
+	            </select>
+	          </div>
+
+	            <label>Semester</label>
+	            <div class="controls">
+	             <select
+	              	required
+                    ng-model="parameter.semester"
+                    name="semester"
+                    ng-Change="reset()"
+                    class="input-large"
+                    ng-options="v.value as v.label for v in l_semester">
+	            </select>
+	            </div>
+	            <label></label>
+	            <button class="btn btn-large btn-primary" id="bt_ujian"
+	              ng-disabled="form.$invalid" 
+	              type="button" 
+	              ng-click="loaddata()">
+	              {{bt_title}}
+	            </button>
+	            <button class="btn btn-large btn-warning"
+	              type="button" 
+	              ng-click="reset()">
+	              Reset
+	            </button>
+	        </div>
+	     </fieldset>      
+	</form>
+	  <br/><br/>
+
+	  <ng-switch on="uts">
+	  <div ng-switch-when=""></div>
+	  <div ng-switch-default>
+
+		<div jofade class="tabbable">
+		  <ul id="myTab" class="nav nav-tabs">
+		    <li class="active"><a href="#uts" data-toggle="tab">UTS</a></li>
+		    <li><a href="#uas" data-toggle="tab">UAS</a></li>
+		  </ul>
+		  <div id="myTabContent" class="tab-content">
+		    <div class="tab-pane active" id="uts">
+		    	<table id="tbl_jadwal_ujian" jofade class="table table-hover">
+			     <caption><b>
+		            Jadwal UTS Tahun Akademik {{parameter.tahun}} <br/>
+		            <ng-switch on="parameter.semester">
+		                <div ng-switch-when="1">Semester Ganjil</div>
+		                <div ng-switch-when="2">Semester Genap</div>
+		                <div ng-switch-when="3">Semester Pendek</div>
+		            </ng-switch>
+		          </b></caption>
+			     <thead>
+			       <tr>
+			         <th>Nama Matakuliah</th>
+			         <th>jadwal Ujian</th>
+			         <th>Ruang</th>
+			         <th>#</th>
+			       </tr>
+			     </thead>
+			     <tbody ng-repeat="item in uts">
+			       <tr ng-dblclick="showDetail($index,'UTS')">
+			         <td>{{item.NM_MK}}</td>
+			         <td>{{item.TGL}}<br/>Jam : {{item.JAM_MULAI}} - {{item.JAM_SELESAI}}</td>
+			         <td>{{item.NO_RUANG}}</td>
+			         <td><a class="icon-search-2" ng-click="showDetail($index,'UTS')"></a></td>
+			       </tr>
+			     </tbody>
+			    </table>
+		    </div>
+
+		    <div class="tab-pane" id="uas">
+		    	<table jofade class="table table-hover">
+			     <caption><b>
+		            Jadwal UAS Tahun Akademik {{parameter.tahun}} <br/>
+		            <ng-switch on="parameter.semester">
+		                <div ng-switch-when="1">Semester Ganjil</div>
+		                <div ng-switch-when="2">Semester Genap</div>
+		                <div ng-switch-when="3">Semester Pendek</div>
+		            </ng-switch>
+		          </b></caption>
+			     <thead>
+			       <tr>
+			         <th>Nama Matakuliah</th>
+			         <th>jadwal Ujian</th>
+			         <th>Ruang</th>
+			         <th>#</th>
+			       </tr>
+			     </thead>
+			     <tbody ng-repeat="item in uas">
+			       <tr ng-dblclick="showDetail($index,'UAS')">
+			         <td>{{item.NM_MK}}</td>
+			         <td>{{item.TGL}}<br/>Jam : {{item.JAM_MULAI}} - {{item.JAM_SELESAI}}</td>
+			         <td>{{item.NO_RUANG}}</td>
+			         <td><a class="icon-search-2" ng-click="showDetail($index,'UAS')"></a></td>
+			       </tr>
+			     </tbody>
+			    </table>
+		    </div>
+		  </div>
+
+		</div>  
+	    
+	   
+	  </div>
+	  </ng-switch>
+  	 </div>  
+    
+    <div jofade ng-switch-when="1">
+       <table class="table table-striped table-bordered">
+          <tr>
+            <td>Mata Kuliah</td><td>{{detailData.NM_MK}}</td>
+          </tr>
+          <tr>
+            <td>Kelas</td><td>{{detailData.KELAS_PARAREL}}</td>
+          </tr>
+          <tr>
+            <td>SKS</td><td>{{detailData.SKS}}</td>
+          </tr>
+          <tr>
+            <td>JadwaL Ujian</td><td>{{detailData.TGL}}<br/>Jam : {{detailData.JAM_MULAI}} - {{detailData.JAM_SELESAI}}</td>
+          </tr>
+          <tr>
+            <td>No. Ruang</td><td>{{detailData.NO_RUANG}}</td>
+          </tr>
+          <tr>
+            <td>Dosen Pengampu</td><td>{{detailData.NM_DOSEN}}</td>
+          </tr>
+       </table>
+    </div>
+  </ng-switch>
+
+</div>
+
+<script src="lib/bootmetro/js/bootstrap-tab.js"></script>

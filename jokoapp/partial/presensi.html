@@ -1,0 +1,131 @@
+<ng-include ng-controller="HeaderCtrl" ng-hide="hideMenu" src="'partial/header.html'"></ng-include>
+<div jofade class="span12 main-content">
+  <ng-include src="'partial/pesan.html'"></ng-include>
+  <ng-switch on="detail">
+      <div ng-switch-when="1">
+       <button class="win-command" ng-click="back()">
+          <span class="win-commandimage win-commandring">&#xe05d;</span>
+       </button>
+       <span style="font-size:150%">{{title}}</span>
+       </div>
+       <div ng-switch-when="0">
+       <span class="title" style="font-size:150%">{{title}}</span>
+       </div>      
+    </ng-switch>
+
+  <ng-switch on="detail">
+    <div ng-switch-when="0">
+      <form>
+           <fieldset>
+                 <div class="control-group">
+                  <div class="controls">
+                  <label>Tahun Ajaran</label>
+                   <select
+                    required
+                    ng-model="parameter.tahun"
+                    name="ta"
+                    class="input-large"
+                    ng-Change="reset()"
+                    ng-options="v.value as v.label for v in l_tahun">
+                  </select>
+                </div>
+
+                  <label>Semester</label>
+                  <div class="controls">
+                   <select
+                    required
+                    ng-model="parameter.semester"
+                    name="semester"
+                    ng-Change="reset()"
+                    class="input-large"
+                    ng-options="v.value as v.label for v in l_semester">
+                  </select>
+                  </div>
+                  <label></label>
+                  <button class="btn btn-large btn-primary"
+                    id="bt_presensi"
+                    ng-disabled="form.$invalid" 
+                    type="button" 
+                    ng-click="loaddata()">
+                    {{bt_title}}
+                  </button>
+                  <button class="btn btn-large btn-warning"
+                    type="button" 
+                    ng-click="reset()">
+                    Reset
+                  </button>
+              </div>
+           </fieldset>      
+      </form>
+      <br/><br/>
+
+      <ng-switch on="data">
+      <div ng-switch-when=""></div>
+      <div ng-switch-default>
+        <table id="tbl_presensi" jofade class="table table-hover">
+        <caption><b>
+            Presensi Mahasiswa Tahun Akademik {{parameter.tahun}} <br/>
+            <ng-switch on="parameter.semester">
+                <div ng-switch-when="1">Semester Ganjil</div>
+                <div ng-switch-when="2">Semester Genap</div>
+                <div ng-switch-when="3">Semester Pendek</div>
+            </ng-switch>
+          </b></caption>
+         <thead>
+           <tr>
+             <th>Matakuliah</th>
+             <th>Kuliah</th>
+             <th>%</th>
+             <th>#</th>
+           </tr>
+         </thead>
+         <tbody ng-repeat="item in data">
+           <tr ng-dblclick="showDetail($index)">
+             <td>{{item.NM_MK}}</td>
+             <td>{{item.JUM_KULIAH}}</td>
+             <td>{{item.PROSEN}}</td>
+             <td><a class="icon-search-2" ng-click="showDetail($index)"></a></td>
+           </tr>
+         </tbody>
+        </table>       
+      </div>
+      </ng-switch>
+    </div>  
+    
+    <div jofade ng-switch-when="1">
+       <table class="table table-striped table-bordered">
+          <tr>
+            <td>Mata Kuliah</td><td>{{detailData.NM_MK}}</td>
+          </tr>
+          <tr>
+            <td>Kelas</td><td>{{detailData.KELAS_PARAREL}}</td>
+          </tr>
+          <tr>
+            <td>SKS</td><td>{{detailData.SKS}}</td>
+          </tr>
+          <tr>
+            <td>Jadwal Kuliah</td><td>{{detailData.JADWAL1}}<br/>{{detailData.JADWAL2}}</td>
+          </tr>
+          <tr>
+            <td>Jumlah Mhs.</td><td>{{detailData.TERISI}}</td>
+          </tr>
+          <tr>
+            <td>Kuliah</td><td>{{detailData.JUM_KULIAH}}</td>
+          </tr>
+          <tr>
+            <td>Hadir</td><td>{{detailData.JUM_HADIR}}</td>
+          </tr>
+          <tr>
+            <td>Izin</td><td>{{detailData.JUM_IZIN}}</td>
+          </tr>
+          <tr>
+            <td>% Kehadiran</td><td>{{detailData.PROSEN}} %</td>
+          </tr>
+          <tr>
+            <td>Update</td><td>{{detailData.TGL_UPDATE}}</td>
+          </tr>
+       </table>
+    </div>
+  </ng-switch>
+
+</div>

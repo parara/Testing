@@ -1,0 +1,77 @@
+<script type="text/javascript">
+$(function(){
+      $('#charms').charms({ width: "20px", animateDuration: 600 });
+      $("#settings").click(function (e) {
+            e.preventDefault();
+            $('#charms').charms('showSection', 'theme-charms-section');
+            $('.jo-backdrop').fadeIn('slow');
+            open_menu = 1;
+      });
+
+      $("#close").click(function (e) {
+            e.preventDefault();
+            $('#charms').charms('close');
+            $('.jo-backdrop').fadeOut('fast');
+            open_menu = 0;
+      });
+   });
+   
+  
+
+</script>
+   
+   <div id="nav-bar" class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          
+          <div class="brand">
+              <h2><img style="display: inline" src="img/logo.png" class="rounded" width="32px" height="32px" /> <b>{{appName}}</b></h2></div>
+         <div id="top-info" class="pull-right" style="margin-right:15px">        
+               <a id="settings"  href="#">
+                  <b class="icon-list"></b>
+               </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+   <div id="charms" class="fluid-layout win-ui-dark overthrow" style="overflow-y : auto; max-height:100%">
+         <div id="theme-charms-section" class="charms-section" >
+            <div class="charms-header">
+               <button id="close" class="win-command">
+                  <span class="win-commandimage win-commandring">&#xe05d;</span>
+               </button>
+               <h2>Menu</h2>
+            </div>
+            <hr/>
+               <div class="icon-user large-image"></div>
+                  <div class="user-detail">
+                     <h3>{{user.nama}}</h3>
+                     <h5>{{user.nim}}</h5>
+                     <h5>{{user.jurusan}}</h5>
+                  </div>
+                  
+               <hr/>
+            <div ng-repeat="menu in menus"  class="listview-container fluid-layout">                     
+                  <div ng-tap="navigate('{{menu.path}}')" class="mediumListIconTextItem">
+                     <div class="{{menu.icon}} mediumListIconTextItem-Image"></div>
+                     <div class="mediumListIconTextItem-Detail">
+                        <h3>{{menu.title}}</h3>
+                     </div>
+                  </div>
+                  <ng-switch on="menu.path">
+                     <hr ng-switch-when="/presensi"/>
+                  </ng-switch>
+
+            </div>
+                   
+            <div ng-click="out.show()" class="mediumListIconTextItem">
+                  <div class="icon-out mediumListIconTextItem-Image"></div>
+                  <div class="mediumListIconTextItem-Detail">
+                     <h3>Keluar</h3>
+                  </div>
+            </div>           
+         </div>
+      
+   </div>
