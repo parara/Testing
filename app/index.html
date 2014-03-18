@@ -24,13 +24,7 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span10">
-          <ul>
-            <li ng-repeat="app in apps | filter:query" class="thumbnail">
-              <a href="#/home/kategori/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}"></a>
-              <a href="#/home/kategori/{{app.id}}">{{app.name}}</a>
-              <p>{{app.snippet}}</p>
-            </li>
-          </ul>
+        <a href="#/home/kategori">kategori</a>
         </div>
       </div>
     </div>
@@ -40,6 +34,7 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span10">
+          <a href="#/home/">back</a>
           <ul>
             <li ng-repeat="app in apps | filter:query" class="thumbnail">
               <a href="#/home/kategori/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}"></a>
