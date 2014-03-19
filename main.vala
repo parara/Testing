@@ -17,7 +17,7 @@ namespace Warung {
 		window.title = TITLE;
 		window.window_position = WindowPosition.CENTER;
 		try {
-			window.icon = new Gdk.Pixbuf.from_file (Environment.get_current_dir() + "/public/favicon.ico");
+			window.icon = new Gdk.Pixbuf.from_file (Environment.get_current_dir() + "/app/favicon.ico");
 		} catch (Error e) {
     	stderr.printf ("Could not load application icon: %s\n", e.message);
   	}
