@@ -15,6 +15,7 @@ WarsiCtr.controller('AppListCtr', ['$scope', 'DaftarApp',
     $scope.derets =['brasero','audicious','vlc','totem','firefox','chromium','pidgin','filezilla','geany','gparted','shotwell','stardict','libreoffice','evolution'
     ];
     $scope.orderProp = 'age';
+    $scope.aksi = $scope.selected;
   }
 ]);
 

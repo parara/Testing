@@ -71,7 +71,7 @@ WarsiJson.factory('DaftarApp', function() {
       "age": 8, 
       "id": "geany",
       "genre": "aksesoris", 
-      "imageUrl": "img/Komodo/apps/scalable/geany2.svg", 
+      "imageUrl": "img/Komodo/apps/scalable/geany.svg", 
       "name": "Geany", 
       "info": "Geany adalah GTK2 text editor yang terhubung dengan integrated development environment(IDE)."
     },
@@ -95,7 +95,7 @@ WarsiJson.factory('DaftarApp', function() {
       "age": 11, 
       "id": "stardict",
       "genre": "aksesoris", 
-      "imageUrl": "img/Komodo/apps/scalable/stardict.svg", 
+      "imageUrl": "img/Komodo/apps/scalable/accessories-dictionary.svg", 
       "name": "Stardict", 
       "info": "Program kamus penterjemah terbaik di Linux dan Windows."
     },
