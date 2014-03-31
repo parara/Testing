@@ -67,11 +67,11 @@ namespace Warung {
 	
 			exception = null;
 
-			//var nama = "brasero";
+			var nama = "brasero";
 
 			//run program with root previlage or run gksudo, its show a box root
 			try {
-				Process.spawn_command_line_async ("sudo apt-get install brasero -y");
+				Process.spawn_command_line_async (@"sudo apt-get install $nama -y");
 			} catch (SpawnError e) {
 				stdout.printf ("Error: %s\n", e.message);
 			}
@@ -100,7 +100,7 @@ namespace Warung {
 			{ "injek", injekrepo, PropertyAttribute.ReadOnly },
 			{ "update", updaterepo, PropertyAttribute.ReadOnly },
 			{ "upgrade", upgradesistem, PropertyAttribute.ReadOnly },
-			{ "pasang0", install0, PropertyAttribute.ReadOnly },
+			{ "install0", install0, PropertyAttribute.ReadOnly },
 			{ "pasang1", install1, PropertyAttribute.ReadOnly },
 			{ null, null, 0 }
 		};

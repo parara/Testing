@@ -1,8 +1,9 @@
 'use strict';
 
-function install0()     { (Apps.pasang0());
+function install0() { 
+  (Apps.install0());
 }
-
+/*
 function install1()     { (Apps.pasang1());
 }
 
@@ -19,7 +20,7 @@ function install($scope) {
     $scope.apalah = "selain";
     console.log(apalah);
   }
-}
+}*/
 
 /* Controllers */
 
@@ -57,6 +58,9 @@ WarsiCtr.controller('AppDetailCtr', ['$scope', '$routeParams','DaftarApp',
       return item.id === $routeParams.appId;
     });
     $scope.app = itemSelected;
+    $scope.install = function(app){
+      alert(app)
+    }
   }
 ]);
 
