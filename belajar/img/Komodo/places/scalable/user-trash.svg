@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="96"
+   height="96"
+   id="svg11037"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="user-trash-full.svg">
+  <defs
+     id="defs11039">
+    <linearGradient
+       y2="1046.1001"
+       x2="47.999954"
+       y1="962.62189"
+       x1="47.999954"
+       gradientTransform="matrix(1.15,0,0,1.15,-7.1999462,-150.65291)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3886"
+       xlink:href="#linearGradient3795"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3795">
+      <stop
+         style="stop-color:#13a6fd;stop-opacity:1;"
+         offset="0"
+         id="stop3797" />
+      <stop
+         style="stop-color:#2975b6;stop-opacity:1;"
+         offset="1"
+         id="stop3799" />
+    </linearGradient>
+    <linearGradient
+       y2="1046.1001"
+       x2="47.999954"
+       y1="962.62189"
+       x1="47.999954"
+       gradientTransform="matrix(1.15,0,0,1.15,-7.1999462,-150.65292)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient11642"
+       xlink:href="#linearGradient5608"
+       inkscape:collect="always" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3009">
+      <path
+         id="path3011"
+         d="m -2,956.36218 -96,0 0,33.5624 96,25.68742 0,-59.24982 z"
+         style="opacity:0.15;fill:#ffffff;fill-opacity:1;stroke:none"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <filter
+       color-interpolation-filters="sRGB"
+       height="1.5863668"
+       id="filter3663"
+       inkscape:collect="always"
+       width="1.0679877"
+       x="-0.03399387"
+       y="-0.29318339">
+      <feGaussianBlur
+         id="feGaussianBlur3665"
+         inkscape:collect="always"
+         stdDeviation="1.1464079" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter5856"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur5858"
+         inkscape:collect="always"
+         stdDeviation="0.5495621" />
+    </filter>
+    <linearGradient
+       gradientTransform="matrix(0.4729521,0,0,0.4729521,3.1514681,9.5438915)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3708"
+       inkscape:collect="always"
+       x1="135"
+       x2="135"
+       xlink:href="#linearGradient5432"
+       y1="33.402424"
+       y2="269.55396" />
+    <linearGradient
+       id="linearGradient5432">
+      <stop
+         id="stop5434"
+         offset="0"
+         style="stop-color:#9ba1a1;stop-opacity:1" />
+      <stop
+         id="stop5436"
+         offset="1"
+         style="stop-color:#303030;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(0.4729521,0,0,0.5175424,3.1514681,8.3726868)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3710"
+       inkscape:collect="always"
+       x1="128.88643"
+       x2="128.95178"
+       xlink:href="#linearGradient5489"
+       y1="16.555357"
+       y2="26.265881" />
+    <linearGradient
+       id="linearGradient5489">
+      <stop
+         id="stop5491"
+         offset="0"
+         style="stop-color:#434343;stop-opacity:1" />
+      <stop
+         id="stop5493"
+         offset="1"
+         style="stop-color:#202020;stop-opacity:1" />
+    </linearGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       height="1.0876698"
+       id="filter5173"
+       inkscape:collect="always"
+       width="2.4290926"
+       x="-0.71454632"
+       y="-0.043834951">
+      <feGaussianBlur
+         id="feGaussianBlur5175"
+         inkscape:collect="always"
+         stdDeviation="3.6314836" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       height="1.0911009"
+       id="filter5177"
+       inkscape:collect="always"
+       width="2.4853523"
+       x="-0.74267614"
+       y="-0.045550432">
+      <feGaussianBlur
+         id="feGaussianBlur5179"
+         inkscape:collect="always"
+         stdDeviation="3.7741457" />
+    </filter>
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3712"
+       inkscape:collect="always"
+       x1="-203.00714"
+       x2="-54.223618"
+       xlink:href="#linearGradient5608"
+       y1="36.488445"
+       y2="36.488445" />
+    <linearGradient
+       id="linearGradient5608">
+      <stop
+         id="stop5610"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+      <stop
+         id="stop5616"
+         offset="0.5"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop
+         id="stop5612"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+    </linearGradient>
+    <filter
+       color-interpolation-filters="sRGB"
+       height="1.9408083"
+       id="filter5688"
+       inkscape:collect="always"
+       width="1.0246283"
+       x="-0.012314133"
+       y="-0.47040415">
+      <feGaussianBlur
+         id="feGaussianBlur5690"
+         inkscape:collect="always"
+         stdDeviation="0.76339172" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter5860"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur5862"
+         inkscape:collect="always"
+         stdDeviation="0.5495621" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       height="4.5737052"
+       id="filter5676"
+       inkscape:collect="always"
+       width="1.2343413"
+       x="-0.11717066"
+       y="-1.7868526">
+      <feGaussianBlur
+         id="feGaussianBlur5678"
+         inkscape:collect="always"
+         stdDeviation="1.6146258" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       height="2.4591112"
+       id="filter5709"
+       inkscape:collect="always"
+       width="1.0120995"
+       x="-0.0060497541"
+       y="-0.72955561">
+      <feGaussianBlur
+         id="feGaussianBlur5711"
+         inkscape:collect="always"
+         stdDeviation="0.37759638" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       height="1.8217804"
+       id="filter5831"
+       inkscape:collect="always"
+       width="1.4874817"
+       x="-0.24374086"
+       y="-0.41089019">
+      <feGaussianBlur
+         id="feGaussianBlur5833"
+         inkscape:collect="always"
+         stdDeviation="0.67677241" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       height="1.4268649"
+       id="filter6267"
+       inkscape:collect="always"
+       width="1.5191984"
+       x="-0.25959918"
+       y="-0.21343246">
+      <feGaussianBlur
+         id="feGaussianBlur6269"
+         inkscape:collect="always"
+         stdDeviation="1.1502581" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="29.118614"
+     inkscape:cy="59.964634"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="750"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="0,1"
+       position="-24.748737,0"
+       id="guide11064" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-23.233509,96"
+       id="guide11066" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="0,54.800776"
+       id="guide11068" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="96,51.012704"
+       id="guide11070" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-18.94036,48"
+       id="guide11072" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="48,79.296975"
+       id="guide11074" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="2,75.508903"
+       id="guide11076" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-77.27667,2"
+       id="guide11078" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="94,77.781746"
+       id="guide11080" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-65.912454,94"
+       id="guide11082" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata11042">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-956.36218)">
+    <rect
+       x="2"
+       y="958.36218"
+       width="92"
+       height="92"
+       style="fill:url(#linearGradient11642);fill-opacity:1.0;opacity:1"
+       id="rect3867"
+       rx="25"
+       ry="25" />
+    <g
+       style="display:inline;enable-background:new"
+       id="g3667"
+       inkscape:export-filename="C:\Documents and Settings\guille\Escritorio\user-trash-full.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(0.68805051,0,0,0.68805051,1.9006172,957.20158)">
+      <path
+         inkscape:connector-curvature="0"
+         d="m 31.21875,120.8125 c -2.173282,0 -3.09375,1.60326 -3.09375,3.59375 0,1.99048 7.232048,4.32854 9.40533,4.32854 l 39.12408,0.1837 c 0.087,0.0518 -0.874752,-0.81832 -0.71691,-0.76224 0.23762,0.0844 0.594288,0.23555 0.78125,0.34375 0.260928,0.15096 0.521625,0.23374 1.15625,0.40625 l 0.84375,0.21875 0,0.40625 c 0.0052,0.369 0.01517,0.40602 0.21875,0.46875 0.304552,0.0938 1.189842,0.17594 1.75,0.15625 0.246808,-0.009 0.998332,-0.0208 1.6875,0 1.80155,0.0544 3.181214,0.0542 3.8125,0 0.333396,-0.0287 0.69462,-0.0421 0.96875,-0.0313 0.629042,0.0249 2.387871,-0.005 3.65625,-0.0937 0.609647,-0.0427 1.369422,-0.11389 1.6875,-0.125 0.633881,-0.0221 0.860422,-0.0388 1.1875,-0.125 0.27503,-0.0725 0.285589,-0.10837 0,-0.21875 -0.283692,-0.10966 -0.38396,-0.19698 -0.28125,-0.25 0.135692,-0.07 0.735901,-0.1883 1.375,-0.25 1.076835,-0.10393 1.175582,-0.12369 1.375,-0.375 0.197387,-0.24877 0.50204,-0.40341 1.125,-0.6875 l 0.84375,0 c 2.17329,0 10.9375,-2.35326 10.9375,-4.34375 0,-1.99049 -1.10796,-2.84375 -3.28125,-2.84375 l -74.5625,0 z"
+         id="path2713"
+         sodipodi:nodetypes="csccsscccssssssssssssccscc"
+         style="opacity:0.5;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;filter:url(#filter3663)"
+         transform="matrix(1,0,0,0.9623258,0,4.5515137)" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 16.515504,21.723731 c 0,0 3.571554,-6.306451 6.418335,-6.418334 28.151506,-1.106398 82.780041,-0.898079 87.984661,-0.267431 1.44141,0.174657 6.07165,7.220626 6.41833,7.220626 L 16.515504,21.723731 z"
+         id="path5618"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         sodipodi:nodetypes="csscc"
+         style="fill:#585c5b;fill-opacity:1;fill-rule:evenodd;stroke:#595d5c;stroke-width:0.4932608px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m -42.32535,36.86747 c 16.88831,-3.572907 6.49618,-8.133186 3.79518,-13.012048 l -17.89156,-2.168675 17.891565,-1.084337 11.385545,12.46988 c 0.02121,5.330226 -8.31959,3.970835 -15.18073,3.79518 z"
+         id="path5680"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         sodipodi:nodetypes="cccccc"
+         style="opacity:0.29149798;fill:#ffffff;fill-rule:evenodd;stroke:none;filter:url(#filter5856)"
+         transform="matrix(0.4932608,0,0,0.4932608,130.44093,4.3407437)" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 34.37713,107.87316 68.26581,0 c 1.99049,0 3.02564,2.13738 3.02564,7.16599 0,5.02859 -8.031926,10.9878 -10.022413,10.9878 l -55.974183,0 c -1.990485,0 -8.131385,-4.04829 -8.131385,-9.07689 0,-5.0286 0.846046,-9.0769 2.836531,-9.0769 z"
+         id="rect4299"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         sodipodi:nodetypes="ccsccsc"
+         style="fill:#303330;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 28.121019,17.139236 77.757951,0 c 4.71431,0 8.5096,3.795276 8.5096,8.509588 l -5.88348,90.314706 c 0,4.71432 -3.79527,8.50959 -8.509585,8.50959 l -63.584138,0 c -4.714311,0 -8.509588,-3.79527 -8.509588,-8.50959 L 19.611431,25.648824 c 0,-4.714312 3.795277,-8.509588 8.509588,-8.509588 z"
+         id="rect4116"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         sodipodi:nodetypes="ccccccccc"
+         style="fill:url(#linearGradient3708);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         height="3.5257461"
+         id="rect5535"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         rx="1.8720139"
+         ry="1.027439"
+         style="fill:#555a5a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         width="101.73672"
+         x="16.131639"
+         y="21.378483" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 24.583656,16.940786 86.341104,0 1.83705,3.182885 c 0,1.020869 -0.75105,1.842724 -1.68396,1.842724 L 23.358959,21.798874 c -0.932912,0 -1.683958,-0.821854 -1.683958,-1.842723 0,0 1.975743,-3.015365 2.908655,-3.015365 z"
+         id="rect3320"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         sodipodi:nodetypes="ccccccc"
+         style="fill:url(#linearGradient3710);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         height="198.90901"
+         id="rect4406"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         ry="6.389535"
+         style="opacity:0.3;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter5173)"
+         transform="matrix(-0.7554661,0.0287274,0.01649434,0.5334767,-17.856582,-4.4568502)"
+         width="8.137084"
+         x="-71.277199"
+         y="42.72168" />
+      <rect
+         height="198.90901"
+         id="rect4308"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         ry="6.389535"
+         style="opacity:0.3;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter5177)"
+         transform="matrix(0.6897359,0.0287274,-0.01505923,0.5334767,148.71855,-4.4568502)"
+         width="8.137084"
+         x="-71.277199"
+         y="42.72168" />
+      <rect
+         height="3.8948214"
+         id="rect5538"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         rx="2.7377021"
+         ry="1.1349913"
+         style="opacity:0.44534409;fill:url(#linearGradient3712);fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter5688)"
+         transform="matrix(0.4932608,0,0,0.4932608,130.44093,4.3407437)"
+         width="148.78352"
+         x="-203.00714"
+         y="34.541035" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m -215.24096,36.86747 c -16.88831,-3.572907 -6.49618,-8.133186 -3.79518,-13.012048 l 17.89156,-2.168675 -20.06024,0 -9.21687,11.385543 c -0.0212,5.330226 8.31959,3.970835 15.18073,3.79518 z"
+         id="path5620"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         sodipodi:nodetypes="cccccc"
+         style="opacity:0.29149798;fill:#ffffff;fill-rule:evenodd;stroke:none;filter:url(#filter5860)"
+         transform="matrix(0.4932608,0,0,0.4932608,130.44093,4.3407437)" />
+      <rect
+         height="2.1686747"
+         id="rect5622"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         rx="3.0925894"
+         ry="0.64856648"
+         style="opacity:0.47659571;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter5676)"
+         transform="matrix(0.4932608,0,0,0.4932608,130.44093,4.3407437)"
+         width="33.072289"
+         x="-215.24097"
+         y="38.325302" />
+      <rect
+         height="2.1686747"
+         id="rect5682"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         rx="3.0925894"
+         ry="0.64856648"
+         style="opacity:0.47659571;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter5676)"
+         transform="matrix(-0.4932608,0,0,0.4932608,3.4708321,4.3407437)"
+         width="33.072289"
+         x="-215.24097"
+         y="38.325302" />
+      <path
+         inkscape:connector-curvature="0"
+         d="M -203.85542,21.686747 -54.759036,21.144578"
+         id="path5707"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         style="opacity:0.534413;fill:none;stroke:#ffffff;stroke-width:0.69999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter5709)"
+         transform="matrix(0.4932608,0,0,0.4932608,130.44093,4.3407437)" />
+      <rect
+         height="3.2530119"
+         id="rect5713"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         rx="2.7377021"
+         ry="1.1349913"
+         style="opacity:0.5;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:1.2;filter:url(#filter5831)"
+         transform="matrix(1.102804,0,0,0.4481296,250.89914,5.4173685)"
+         width="5.9638553"
+         x="-200.60242"
+         y="22.228916" />
+      <rect
+         height="3.2530119"
+         id="rect5835"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         rx="2.7377021"
+         ry="1.1349913"
+         style="opacity:0.5;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.69999999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:1.2;filter:url(#filter5831)"
+         transform="matrix(1.102804,0,0,0.4481296,166.78219,5.4173685)"
+         width="5.9638553"
+         x="-62.602417"
+         y="22.228916" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m -224.65549,33.076632 8.43416,-10.734393"
+         id="path6136"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         style="opacity:0.70850202;fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6267)"
+         transform="matrix(0.4932608,0,0,0.4932608,130.44093,4.3407437)" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m -224.65549,33.076632 8.43416,-10.734393"
+         id="path6271"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         style="opacity:0.70850202;fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:2.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6267)"
+         transform="matrix(-0.4932608,0,0,0.4932608,3.7336563,4.3407437)" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 60.448911,45.383093 c 1.695367,-0.164393 3.441156,1.435151 4.286322,2.899568 l 6.776162,11.818888 -2.678947,1.512819 11.535238,1.418269 4.601485,-10.74731 -2.678951,1.575846 -3.56142,-6.145821 c -0.563773,-0.977278 -2.366805,-2.41371 -4.254801,-2.300743 -1.886991,0.113966 -12.451749,-0.125302 -14.025088,-0.03152 z m -0.504265,0.283652 c -1.553159,0.134147 -3.628245,0.642948 -4.727556,2.458329 L 48.630025,59.565763 59.3143,65.743099 66.374119,53.451454 63.569102,48.534797 C 62.83488,47.267052 61.410057,45.903753 59.944646,45.666745 z m 26.379759,15.380318 -10.68428,6.17734 7.217406,12.354676 6.303406,0 c 1.161846,0 2.48985,-0.551669 3.498394,-1.260682 l 0.06303,-0.09455 c 0.70498,-1.408925 1.473486,-3.65169 0.378204,-5.64155 l -6.77616,-11.535234 z m -32.998338,2.710461 -11.472203,1.54434 2.615915,1.44978 -3.592946,6.082789 c -0.564784,0.977278 -0.885251,3.244746 0.157587,4.822112 0.975477,1.481173 5.373509,9.48743 6.650093,11.598264 -0.552235,-1.38947 -0.04526,-3.319243 0.693377,-4.601485 l 6.870715,-11.913442 2.584396,1.575856 -4.506934,-10.558214 z m 21.49462,13.615364 -7.343472,9.423597 7.343472,9.455107 0,-3.277772 6.744646,0.06304 c 1.127556,0 3.252053,-0.829035 4.09721,-2.521365 0.846172,-1.690323 6.354844,-10.725119 7.059819,-12.134058 -0.704975,1.550131 -2.971175,2.269227 -4.664516,2.269227 l -13.237159,0 0,-3.277772 z m -22.786823,3.277772 -2.962598,5.137275 c -0.70699,1.225372 -1.166635,3.010251 -0.724891,4.380868 0.899619,1.260682 2.339822,2.762657 4.412381,2.805017 l 13.457777,0 0,-12.32316 -14.182669,0 z"
+         id="path5451"
+         inkscape:export-filename="/home/seba/Dropbox/Ubuntu Icons/user-trash2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         style="opacity:0.83404254;fill:#ffffff;overflow:visible" />
+    </g>
+    <rect
+       ry="25"
+       rx="25"
+       id="rect3003"
+       style="opacity:0.15;fill:#ffffff;fill-opacity:1"
+       height="92"
+       width="92"
+       y="958.36218"
+       x="-96"
+       clip-path="url(#clipPath3009)"
+       transform="translate(98,0)" />
+  </g>
+</svg>

@@ -1,5 +1,8 @@
 'use strict';
 
+function install()     { (Apps.pasang());
+}
+
 /* Controllers */
 
 var WarsiCtr = angular.module('WarsiCtr', ['WarsiJson','xeditable','ui.bootstrap']);

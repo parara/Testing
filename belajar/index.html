@@ -18,26 +18,125 @@
     <link href="css/xeditable.css" rel="stylesheet">
   </head>
   <body>
+<!-- Docs master nav header
+================================================== -->
+    <a class="sr-only" href="#content">Skip to main content</a>
 
-testing
+    <!-- Docs master nav -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/home">Warung Aplikasi</a>
+      </div>
 
-<div class="bs-docs-section" ng-controller="RepoCtr">
-  <h3 align="center" class="page-header">Sumber Repository</h3>
-  <div>
-    <h3>Status Repository : <a href="#" editable-select="user.status" buttons="no" e-ng-options="s.value as s.text for s in statuses">
-      {{showStatus()}}
-    </a></h3>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/home">Muka</a></li>
+        <li><a href="#/kategori">Kategori</a></li>
+        <li><a href="#/repo">Repository</a></li>
+      </ul>
+      <!-- missing aksi -->
+      <form class="navbar-form navbar-right col-md-3" ng-controller="AppListCtr">
+        <input type="text" ng-model="selected" typeahead="deret for deret in derets | filter:$viewValue" class="form-control input-normal" placeholder="Pencarian...">
+      </form>
+    </nav>
   </div>
-  {{itemS.kode | json}}
-  <h4>{{ itemS.konten.komentar }}</h4>
-  <h5>{{ itemS.konten.isimain }}</h5>
-  <h5>{{ itemS.konten.isiupdate }}</h5>
-  <h5>{{ itemS.konten.isisecurity }}</h5>
-  <div class="col-md-6" >
-    <a type="button" class="btn btn-outline" onClick="tanggal();">
-    Simpan</a>
+</header>
+
+<!-- Docs page layout
+================================================== -->
+<div class="bs-docs-header" id="content">
+  <div class="container">
+      <center><h2>BlankOn Linux</h2>
+      100% buatan Putra-Putri Indonesia.
+      </center>
   </div>
 </div>
+<div class="container bs-docs-container">
+  <div class="row">
+    <div class="col-md-9" role="main">
+      <div ng-view></div>
+    </div>
+
+<!-- Sidebar
+================================================== -->
+    <div class="col-md-3">
+      <div class="bs-docs-sidebar hidden-print" role="complementary">
+        <div class="bs-docs-section">
+          <h3 id="info" class="page-header">Detail Pengguna</h3>
+          <center><img ng-src="img/Komodo/places/scalable/distributor-logo.svg"></center><p></p>
+          <div class="highlight"><pre><code class="bash">
+Device  : BlankOn
+Memory  : 4.0 GB
+Prosesor: Intel Core 2 Duo
+Grafik  : Gallium 0.5 AMD
+Base    : BlankOn Linux
+Rilis   : Suroboyo 64-bit
+          </code></pre></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+    <p>Didesain sebagai pengabdian untuk Proyek BlankOn oleh <a href="http://twitter.com/tuanpembual" target="_blank">@tuanpembual</a>.</p>
+    <p>Lisensi kode sumber dibawah <a href="https://github.com/tuanpembual/06alpa01/blob/master/LICENSE" target="_blank">MIT</a>, dokumentasi dibawah <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <ul class="bs-docs-footer-links muted">
+      <li>Versi Terakhir v0.1</li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/tuanpembual/06alpa01">GitHub</a></li>
+    </ul>
+    <p>&copy; 2005-2014, YPLI dan Tim Pengembang BlankOn</p>
+  </div>
+</footer>
+
+<!-- Script Home
+================================================== -->  
+  <script type="text/ng-template" id="home.html">
+    <!-- Aplikasi
+    ================================================== -->
+    <div class="bs-docs-section" ng-controller="AppListCtr">
+      <h2 align="center" id="deret" class="page-header">Pilihan Aplikasi</h2>
+      <dev ng-repeat="app in apps | filter:filters">
+        <a href="#/detail/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}"></a>
+      </dev>
+    </div>       
+  </script>
+
+<!-- Script Detail Aplikasi
+================================================== --> 
+  <script type="text/ng-template" id="app-detail.html">
+    <div class="bs-docs-section">
+    <h3 align="center" class="page-header">Detail Aplikasi</h3>
+      <div class="bs-docs-section col-md-6">
+        <h3><img ng-src="{{app.imageUrl}}">  {{app.name}}<br><small>Versi: {{app.versi}}</small></h3>
+        <p>{{app.info}}</p>
+        <a type="button" class="btn btn-primary" onClick="install();">Pasang</a>
+        <a type="button" class="btn btn-primary" onClick="">Hapus</a>
+        <a type="button" class="btn btn-primary" onClick="">Perbaharui</a>
+      </div>
+
+      <div class="bs-docs-section col-md-6">
+        <h4>Pengembangan {{app.name}}</h4>
+        <div ng-repeat="url in app.url">{{url}}</div>
+        <h4>{{app.name}} dikembangkan oleh :</h4>
+        <ul><li ng-repeat="author in app.authors">
+          {{author}}
+        </li></ul>
+      </div>
+    </div>
+  </script>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -55,7 +154,5 @@ testing
   <script src="js/app.js"></script>
   <script src="js/appjson.js"></script>
   <script src="js/controller.js"></script>
-
-  <script src="js/s.js"></script>
   </body>
 </html>

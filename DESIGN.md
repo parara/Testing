@@ -8,8 +8,8 @@ Ada banyak peer yang ingin saya kerjakan di repo ini, berhubung saya masih belaj
  * Editor for change repo (access file and rewrite) (done)
  * Run root command (update, upgrade, dist-upgrade) (done)
  * Build dpkg from repo
- * Get info (CORS Problem)
- * Dynamic Routing
+ * Get info (CORS Problem) -- 
+ * Dynamic Routing (done)
  
 ## Tugas lanjut
 
