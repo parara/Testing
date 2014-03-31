@@ -62,10 +62,7 @@ namespace Warung {
 		JSCore.Object thisObject,
 		JSCore.Value[] arguments,
 		out JSCore.Value exception) {
-
 			exception = null;
-			
-			//its need root previlage
 			try {
 				Process.spawn_command_line_async ("sudo apt-get update -y");
 			} catch (SpawnError e) {
@@ -79,10 +76,7 @@ namespace Warung {
 		JSCore.Object thisObject,
 		JSCore.Value[] arguments,
 		out JSCore.Value exception) {
-	
 			exception = null;
-			
-			//run program with root previlage or run gksudo, its show a box root
 			try {
 				Process.spawn_command_line_async ("sudo apt-get dist-upgrade -y");
 			} catch (SpawnError e) {
@@ -90,7 +84,8 @@ namespace Warung {
 			}
 			return new JSCore.Value.undefined (ctx);
 		}
-		public static JSCore.Value install0 (Context ctx,
+
+		public static JSCore.Value installapp (Context ctx,
 		JSCore.Object function,
 		JSCore.Object thisObject,
 		JSCore.Value[] arguments,
@@ -98,8 +93,9 @@ namespace Warung {
 	
 			exception = null;
 
-			var nama = "brasero";
-
+			//var nama = "brasero";
+			var text = "brasero";
+			var nama = text;
 			//run program with root previlage or run gksudo, its show a box root
 			try {
 				Process.spawn_command_line_async (@"sudo apt-get install $nama -y");
@@ -115,10 +111,6 @@ namespace Warung {
 		out JSCore.Value exception) {
 	
 			exception = null;
-
-			//var nama = "brasero";
-
-			//run program with root previlage or run gksudo, its show a box root
 			try {
 				Process.spawn_command_line_async ("sudo apt-get install audacious -y");
 			} catch (SpawnError e) {
@@ -133,7 +125,7 @@ namespace Warung {
 			{ "kambing", repokambing, PropertyAttribute.ReadOnly },
 			{ "update", update, PropertyAttribute.ReadOnly },
 			{ "upgrade", upgrade, PropertyAttribute.ReadOnly },
-			{ "install0", install0, PropertyAttribute.ReadOnly },
+			{ "installapp", installapp, PropertyAttribute.ReadOnly },
 			{ "pasang1", install1, PropertyAttribute.ReadOnly },
 			{ null, null, 0 }
 		};

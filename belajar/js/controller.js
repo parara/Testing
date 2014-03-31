@@ -43,8 +43,8 @@ WarsiCtr.controller('AppDetailCtr', ['$scope', '$routeParams','DaftarApp',
     $scope.install = function(app){
       alert(app)
     }
-    $scope.install1 = function(){
-      (Apps.install0())
+    $scope.install1 = function(app){
+      (Apps.installapp(app))
     }
   }
 ]);
