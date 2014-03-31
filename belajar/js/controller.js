@@ -43,8 +43,64 @@ WarsiCtr.controller('AppDetailCtr', ['$scope', '$routeParams','DaftarApp',
     $scope.install = function(app){
       alert(app)
     }
-    $scope.install1 = function(app){
-      (Apps.installapp(app))
+    $scope.installapp = function(app){
+      if (app === "brasero") {
+        (Apps.installbrasero())
+      } else if (app ==="audacious"){
+        (Apps.installaudacious())
+      } else if (app ==="vlc"){
+        (Apps.installvlc())
+      } else if (app ==="totem"){
+        (Apps.installtotem())
+      } else if (app ==="firefox"){
+        (Apps.installfirefox())
+      } else if (app ==="chromium"){
+        (Apps.installchromium())
+      } else if (app ==="pidgin"){
+        (Apps.installpidgin())
+      } else if (app ==="geany"){
+        (Apps.installgeany())
+      } else if (app ==="gparted"){
+        (Apps.installgparted())
+      } else if (app ==="shotwell"){
+        (Apps.installshotwell())
+      } else if (app ==="stardict"){
+        (Apps.installstardict())
+      } else if (app ==="libreoffice"){
+        (Apps.installlibreoffice())
+      } else {
+      (Apps.installevolution())
+      };
+    }
+
+    $scope.removeapp = function(app){
+      if (app === "brasero") {
+        (Apps.removebrasero())
+      } else if (app ==="audacious"){
+        (Apps.removeaudacious())
+      } else if (app ==="vlc"){
+        (Apps.removevlc())
+      } else if (app ==="totem"){
+        (Apps.removetotem())
+      } else if (app ==="firefox"){
+        (Apps.removefirefox())
+      } else if (app ==="chromium"){
+        (Apps.removechromium())
+      } else if (app ==="pidgin"){
+        (Apps.removepidgin())
+      } else if (app ==="geany"){
+        (Apps.removegeany())
+      } else if (app ==="gparted"){
+        (Apps.removegparted())
+      } else if (app ==="shotwell"){
+        (Apps.removeshotwell())
+      } else if (app ==="stardict"){
+        (Apps.removestardict())
+      } else if (app ==="libreoffice"){
+        (Apps.removelibreoffice())
+      } else {
+      (Apps.removeevolution())
+      };
     }
   }
 ]);
