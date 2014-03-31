@@ -124,7 +124,7 @@ Rilis   : Suroboyo 64-bit
         <p>{{app.info}}</p>
         <button class="btn btn-primary" ng-click="install(app.id)">Pasang</button>
         <a type="button" class="btn btn-primary" onClick="install0();">Hapus</a>
-        <a type="button" class="btn btn-primary" onClick="">Perbaharui</a>
+        <button class="btn btn-primary" ng-click="install1()">audacious</button>
       </div>
 
       <div class="bs-docs-section col-md-6">
@@ -134,6 +134,28 @@ Rilis   : Suroboyo 64-bit
         <ul><li ng-repeat="author in app.authors">
           {{author}}
         </li></ul>
+      </div>
+    </div>
+  </script>
+
+<!-- Script Repository
+================================================== -->  
+  <script type="text/ng-template" id="repo.html">
+    <div class="bs-docs-section">
+      <h3 align="center" class="page-header">Sumber Repository</h3>
+      <div>
+        <h3>Status Repository : <a href="#" editable-select="user.status" buttons="no" e-ng-options="s.value as s.text for s in statuses">
+          {{showStatus()}}
+        </a></h3>
+      </div> 
+      <h4>{{ itemS.konten.komentar }}</h4>
+      <h5>{{ itemS.konten.isimain }}</h5>
+      <h5>{{ itemS.konten.isiupdate }}</h5>
+      <h5>{{ itemS.konten.isisecurity }}</h5>
+      <div class="col-md-6" >
+        <button class="btn btn-outline" ng-click="simpanrepo(itemS.kode)">Simpan</button>
+        <button class="btn btn-outline" ng-click="updaterepo(itemS.kode)">Update</button>
+        <button class="btn btn-outline" ng-click="upgraderepo(itemS.kode)">Update</button>
       </div>
     </div>
   </script>

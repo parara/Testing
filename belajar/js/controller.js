@@ -3,24 +3,6 @@
 function install0() { 
   (Apps.install0());
 }
-/*
-function install1()     { (Apps.pasang1());
-}
-
-function install($scope) {
-  //scope ini ddapat dari fungsi halaman detail aplikasi. cara kirimnya gmna?
-  $scope.app.id ="";
-  if ($scope.app.id === "brasero") {
-    //(Apps.pasang0());
-    $scope.apalah = "brasero";
-    console.log(apalah);
-  }
-  else {
-    //(Apps.pasang1());
-    $scope.apalah = "selain";
-    console.log(apalah);
-  }
-}*/
 
 /* Controllers */
 
@@ -60,6 +42,9 @@ WarsiCtr.controller('AppDetailCtr', ['$scope', '$routeParams','DaftarApp',
     $scope.app = itemSelected;
     $scope.install = function(app){
       alert(app)
+    }
+    $scope.install1 = function(){
+      (Apps.install0())
     }
   }
 ]);
@@ -117,4 +102,20 @@ WarsiCtr.controller('RepoCtr',
     var selected = $filter('filter')($scope.statuses, {value: $scope.user.status});
     return ($scope.user.status && selected.length) ? selected[0].text : 'Not set';
   };
+  $scope.simpanrepo = function(app) {
+    
+    if (app === "repougm") {
+      (Apps.ugm())
+    } else if (app ==="kambing"){
+      (Apps.kambing())
+    } else {
+      (Apps.arsip())
+    };
+  }
+  $scope.updaterepo = function(app){
+      (Apps.update())
+    }
+  $scope.upgraderepo = function(app){
+      (Apps.upgrade())
+    }
 });

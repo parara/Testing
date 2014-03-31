@@ -9,24 +9,55 @@ namespace Warung {
 		
 		// Functions
 
-		public static JSCore.Value injekrepo (Context ctx,
+		public static JSCore.Value repougm (Context ctx,
 		JSCore.Object function,
 		JSCore.Object thisObject,
 		JSCore.Value[] arguments,
 		out JSCore.Value exception) {
 
 			exception = null;
-			
 			//its need root previlage
 			try {
-				Process.spawn_command_line_sync ("sudo sh "+Environment.get_current_dir()+"public/js/echo");
+				Process.spawn_command_line_sync ("sudo sh "+Environment.get_current_dir()+"/belajar/lib/echougm");
 			} catch (SpawnError e) {
 				stdout.printf ("Error: %s\n", e.message);
 			}
 			return new JSCore.Value.undefined (ctx);
 		}
 
-		public static JSCore.Value updaterepo (Context ctx,
+		public static JSCore.Value repokambing (Context ctx,
+		JSCore.Object function,
+		JSCore.Object thisObject,
+		JSCore.Value[] arguments,
+		out JSCore.Value exception) {
+
+			exception = null;
+			//its need root previlage
+			try {
+				Process.spawn_command_line_sync ("sudo sh "+Environment.get_current_dir()+"/belajar/lib/echokambing");
+			} catch (SpawnError e) {
+				stdout.printf ("Error: %s\n", e.message);
+			}
+			return new JSCore.Value.undefined (ctx);
+		}
+
+		public static JSCore.Value repoarsip (Context ctx,
+		JSCore.Object function,
+		JSCore.Object thisObject,
+		JSCore.Value[] arguments,
+		out JSCore.Value exception) {
+
+			exception = null;
+			//its need root previlage
+			try {
+				Process.spawn_command_line_sync ("sudo sh "+Environment.get_current_dir()+"/belajar/lib/echoarsip");
+			} catch (SpawnError e) {
+				stdout.printf ("Error: %s\n", e.message);
+			}
+			return new JSCore.Value.undefined (ctx);
+		}
+
+		public static JSCore.Value update (Context ctx,
 		JSCore.Object function,
 		JSCore.Object thisObject,
 		JSCore.Value[] arguments,
@@ -43,7 +74,7 @@ namespace Warung {
 			return new JSCore.Value.undefined (ctx);
 		}
 
-		public static JSCore.Value upgradesistem (Context ctx,
+		public static JSCore.Value upgrade (Context ctx,
 		JSCore.Object function,
 		JSCore.Object thisObject,
 		JSCore.Value[] arguments,
@@ -53,7 +84,7 @@ namespace Warung {
 			
 			//run program with root previlage or run gksudo, its show a box root
 			try {
-				Process.spawn_command_line_async ("sudo apt-get upgrade -y");
+				Process.spawn_command_line_async ("sudo apt-get dist-upgrade -y");
 			} catch (SpawnError e) {
 				stdout.printf ("Error: %s\n", e.message);
 			}
@@ -97,9 +128,11 @@ namespace Warung {
 		}
 
 		static const JSCore.StaticFunction[] js_funcs = {
-			{ "injek", injekrepo, PropertyAttribute.ReadOnly },
-			{ "update", updaterepo, PropertyAttribute.ReadOnly },
-			{ "upgrade", upgradesistem, PropertyAttribute.ReadOnly },
+			{ "ugm", repougm, PropertyAttribute.ReadOnly },
+			{ "arsip", repoarsip, PropertyAttribute.ReadOnly },
+			{ "kambing", repokambing, PropertyAttribute.ReadOnly },
+			{ "update", update, PropertyAttribute.ReadOnly },
+			{ "upgrade", upgrade, PropertyAttribute.ReadOnly },
 			{ "install0", install0, PropertyAttribute.ReadOnly },
 			{ "pasang1", install1, PropertyAttribute.ReadOnly },
 			{ null, null, 0 }

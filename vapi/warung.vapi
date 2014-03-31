@@ -12,9 +12,11 @@ namespace Warung {
 	[CCode (cheader_filename = "warung.h")]
 	public class App : GLib.Object {
 		public App ();
-		public static JSCore.Value injekrepo (JSCore.Context ctx, JSCore.Object function, JSCore.Object thisObject, JSCore.Value[] arguments, out JSCore.Value exception);
 		public static JSCore.Value install0 (JSCore.Context ctx, JSCore.Object function, JSCore.Object thisObject, JSCore.Value[] arguments, out JSCore.Value exception);
 		public static JSCore.Value install1 (JSCore.Context ctx, JSCore.Object function, JSCore.Object thisObject, JSCore.Value[] arguments, out JSCore.Value exception);
+		public static JSCore.Value repoarsip (JSCore.Context ctx, JSCore.Object function, JSCore.Object thisObject, JSCore.Value[] arguments, out JSCore.Value exception);
+		public static JSCore.Value repokambing (JSCore.Context ctx, JSCore.Object function, JSCore.Object thisObject, JSCore.Value[] arguments, out JSCore.Value exception);
+		public static JSCore.Value repougm (JSCore.Context ctx, JSCore.Object function, JSCore.Object thisObject, JSCore.Value[] arguments, out JSCore.Value exception);
 		public void setup_js_class (JSCore.GlobalContext context);
 		public static JSCore.Value updaterepo (JSCore.Context ctx, JSCore.Object function, JSCore.Object thisObject, JSCore.Value[] arguments, out JSCore.Value exception);
 		public static JSCore.Value upgradesistem (JSCore.Context ctx, JSCore.Object function, JSCore.Object thisObject, JSCore.Value[] arguments, out JSCore.Value exception);
