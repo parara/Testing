@@ -1,6 +1,24 @@
 'use strict';
 
-function install()     { (Apps.pasang());
+function install0()     { (Apps.pasang0());
+}
+
+function install1()     { (Apps.pasang1());
+}
+
+function install($scope) {
+  //scope ini ddapat dari fungsi halaman detail aplikasi. cara kirimnya gmna?
+  $scope.app.id ="";
+  if ($scope.app.id === "brasero") {
+    //(Apps.pasang0());
+    $scope.apalah = "brasero";
+    console.log(apalah);
+  }
+  else {
+    //(Apps.pasang1());
+    $scope.apalah = "selain";
+    console.log(apalah);
+  }
 }
 
 /* Controllers */

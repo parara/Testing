@@ -59,7 +59,7 @@ namespace Warung {
 			}
 			return new JSCore.Value.undefined (ctx);
 		}
-		public static JSCore.Value installapp (Context ctx,
+		public static JSCore.Value install0 (Context ctx,
 		JSCore.Object function,
 		JSCore.Object thisObject,
 		JSCore.Value[] arguments,
@@ -67,11 +67,29 @@ namespace Warung {
 	
 			exception = null;
 
-			var nama = "brasero";
+			//var nama = "brasero";
 
 			//run program with root previlage or run gksudo, its show a box root
 			try {
-				Process.spawn_command_line_async ("sudo apt-get install $nama -y");
+				Process.spawn_command_line_async ("sudo apt-get install brasero -y");
+			} catch (SpawnError e) {
+				stdout.printf ("Error: %s\n", e.message);
+			}
+			return new JSCore.Value.undefined (ctx);
+		}
+		public static JSCore.Value install1 (Context ctx,
+		JSCore.Object function,
+		JSCore.Object thisObject,
+		JSCore.Value[] arguments,
+		out JSCore.Value exception) {
+	
+			exception = null;
+
+			//var nama = "brasero";
+
+			//run program with root previlage or run gksudo, its show a box root
+			try {
+				Process.spawn_command_line_async ("sudo apt-get install audacious -y");
 			} catch (SpawnError e) {
 				stdout.printf ("Error: %s\n", e.message);
 			}
@@ -82,7 +100,8 @@ namespace Warung {
 			{ "injek", injekrepo, PropertyAttribute.ReadOnly },
 			{ "update", updaterepo, PropertyAttribute.ReadOnly },
 			{ "upgrade", upgradesistem, PropertyAttribute.ReadOnly },
-			{ "pasang", installapp, PropertyAttribute.ReadOnly },
+			{ "pasang0", install0, PropertyAttribute.ReadOnly },
+			{ "pasang1", install1, PropertyAttribute.ReadOnly },
 			{ null, null, 0 }
 		};
 
