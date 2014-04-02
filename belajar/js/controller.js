@@ -108,7 +108,7 @@ WarsiCtr.controller('RepoCtr',
       "kode": "arsip",
       "konten" : {
         "komentar": "## Repository BlankOn Suroboyo - Original",
-        "isimain": "deb http://arsip.blankonlinux.or.id/blankon/suroboyo main restricted extras extras-restricted",
+        "isimain": "deb http://arsip.blankonlinux.or.id/blankon suroboyo main restricted extras extras-restricted",
         "isiupdate": "deb http://arsip.blankonlinux.or.id/blankon suroboyo-updates main restricted extras extras-restricted",
         "isisecurity": "deb http://arsip.blankonlinux.or.id/blankon suroboyo-security main restricted extras extras-restricted"
       }
@@ -117,7 +117,7 @@ WarsiCtr.controller('RepoCtr',
       "kode": "kambing",
       "konten" : {
         "komentar": "## Repository BlankOn Suroboyo - Kambing",
-        "isimain": "deb http://kambing.ui.ac.id/blankon/suroboyo main restricted extras extras-restricted",
+        "isimain": "deb http://kambing.ui.ac.id blankon/suroboyo main restricted extras extras-restricted",
         "isiupdate": "deb http://kambing.ui.ac.id/blankon suroboyo-updates main restricted extras extras-restricted",
         "isisecurity": "deb http://kambing.ui.ac.id//blankon suroboyo-security main restricted extras extras-restricted"
       }
@@ -126,7 +126,7 @@ WarsiCtr.controller('RepoCtr',
       "kode": "repougm",
       "konten" : {
         "komentar": "## Repository BlankOn Suroboyo - repougm",
-        "isimain": "deb http://repo.ugm.ac.id/blankon/suroboyo main restricted extras extras-restricted",
+        "isimain": "deb http://repo.ugm.ac.id/blankon suroboyo main restricted extras extras-restricted",
         "isiupdate": "deb http://repo.ugm.ac.id/blankon suroboyo-updates main restricted extras extras-restricted",
         "isisecurity": "deb http://repo.ugm.ac.id//blankon suroboyo-security main restricted extras extras-restricted"
       }
