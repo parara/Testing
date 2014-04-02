@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en" ng-app="WarsiApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Warung Aplikasi, Sedia software untuk BlankOn Linux">
+    <meta name="description" content="Warung Aplikasi, Manajemen software untuk BlankOn Linux">
     <meta name="keywords" content="HTML, CSS, JS, JavaScript, Vala, Webkit, BlankOn, Package, Manager, WarSi">
     <meta name="author" content="Estu Fardani <andro.medh4@gmail.com>">
     <link rel="shortcut icon" href="favicon.ico">
@@ -43,8 +42,9 @@
       </ul>
       <!-- missing aksi -->
       <form class="navbar-form navbar-right col-md-3" ng-controller="AppListCtr">
-        <input type="text" ng-model="selected" typeahead="deret for deret in derets | filter:$viewValue" class="form-control input-normal" placeholder="Pencarian...">
+        <input ng-click="go(/cari)" ng-model="query" type="text" typeahead="deret for deret in derets | filter:$viewValue" class="form-control input-normal" placeholder="Pencarian...">
       </form>
+
     </nav>
   </div>
 </header>
@@ -116,12 +116,17 @@ Rilis   : Suroboyo 64-bit
 <!-- Script Home
 ================================================== -->  
   <script type="text/ng-template" id="home.html">
+    <div class="bs-docs-section">
+      <h2 align="center" class="page-header">Selayang Pandang</h2>
+      <p><i>Apa yang baru di BlankOn Suroboyo..</i></p>
+      <p></p>
+    </div>
     <!-- Aplikasi
     ================================================== -->
     <div class="bs-docs-section" ng-controller="AppListCtr">
       <h2 align="center" id="deret" class="page-header">Pilihan Aplikasi</h2>
       <dev ng-repeat="app in apps | filter:filters">
-        <a href="#/kategori/{{app.genre}}/detail/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}"></a>
+        <a href="#/kategori/{{app.genre}}/detail/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}" height="42" width="42"></a>
       </dev>
     </div>       
   </script>

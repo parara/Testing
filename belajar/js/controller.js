@@ -12,13 +12,6 @@ WarsiCtr.run(function(editableOptions) {
   editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
 });
 
-WarsiCtr.controller('History', ['$scope',
-  function($scope) {
-    $scope.$back = function() { 
-      window.history.back();
-    }
-}]);
-
 WarsiCtr.controller('HomeCtr', ['$scope','breadcrumbs',
  function($scope, breadcrumbs){
   $scope.breadcrumbs = breadcrumbs;
@@ -28,10 +21,8 @@ WarsiCtr.controller('AppListCtr', ['$scope', 'DaftarApp',
   function($scope, DaftarApp) {
     $scope.selected = undefined;
     $scope.apps = DaftarApp.name;
-    $scope.derets =['brasero','audicious','vlc','totem','firefox','chromium','pidgin','filezilla','geany','gparted','shotwell','stardict','libreoffice','evolution'
-    ];
+    $scope.derets =['brasero','audicious','vlc','totem','firefox','chromium','pidgin','filezilla','geany','gparted','shotwell','stardict','libreoffice','evolution'];
     $scope.orderProp = 'age';
-    $scope.aksi = $scope.selected;
   }
 ]);
 

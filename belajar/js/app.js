@@ -82,7 +82,6 @@ WarsiApp.config(['$routeProvider',
       }).
       when('/cari', { //done
         templateUrl: 'cari.html',
-        controller: 'AppListCtr',
         label: 'Pencarian'
       }).
       otherwise({
