@@ -19,6 +19,11 @@ WarsiCtr.controller('History', ['$scope',
     }
 }]);
 
+WarsiCtr.controller('HomeCtr', ['$scope','breadcrumbs',
+ function($scope, breadcrumbs){
+  $scope.breadcrumbs = breadcrumbs;
+}])
+
 WarsiCtr.controller('AppListCtr', ['$scope', 'DaftarApp',
   function($scope, DaftarApp) {
     $scope.selected = undefined;

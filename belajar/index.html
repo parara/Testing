@@ -36,7 +36,7 @@
       </div>
 
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav">
         <li><a href="#/home">Muka</a></li>
         <li><a href="#/kategori">Kategori</a></li>
         <li><a href="#/repo">Repository</a></li>
@@ -61,6 +61,8 @@
 <div class="container bs-docs-container">
   <div class="row">
     <div class="col-md-9" role="main">
+
+   
       <div ng-view></div>
     </div>
 
@@ -68,6 +70,16 @@
 ================================================== -->
     <div class="col-md-3">
       <div class="bs-docs-sidebar hidden-print" role="complementary">
+         
+         <!-- testing roti -->
+    <ol class="ab-nav breadcrumb" ng-controller="HomeCtr">
+      <li ng-repeat="breadcrumb in breadcrumbs.get() track by breadcrumb.path" ng-class="{ active: $last }">
+        <a ng-if="!$last" ng-href="#{{ breadcrumb.path }}" ng-bind="breadcrumb.label" class="margin-right-xs"></a>
+        <span ng-if="$last" ng-bind="breadcrumb.label"></span>
+      </li>
+    </ol>
+    <!-- end roti -->
+
         <div class="bs-docs-section">
           <h3 id="info" class="page-header">Detail Pengguna</h3>
           <center><img ng-src="img/Komodo/places/scalable/distributor-logo.svg"></center><p></p>
@@ -109,31 +121,89 @@ Rilis   : Suroboyo 64-bit
     <div class="bs-docs-section" ng-controller="AppListCtr">
       <h2 align="center" id="deret" class="page-header">Pilihan Aplikasi</h2>
       <dev ng-repeat="app in apps | filter:filters">
-        <a href="#/detail/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}"></a>
+        <a href="#/kategori/{{app.genre}}/detail/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}"></a>
       </dev>
     </div>       
   </script>
 
-<!-- Script Detail Aplikasi
-================================================== --> 
-  <script type="text/ng-template" id="app-detail.html">
+<!-- Script Kategori
+================================================== -->  
+  <script type="text/ng-template" id="kategori.html">
     <div class="bs-docs-section">
-    <h3 align="center" class="page-header">Detail Aplikasi</h3>
-      <div class="bs-docs-section col-md-6">
-        <h3><img ng-src="{{app.imageUrl}}">  {{app.name}}<br><small>Versi: {{app.versi}}</small></h3>
-        <p>{{app.info}}</p>
-        <button class="btn btn-primary" ng-click="installapp(app.id)">Pasang</button>
-        <button class="btn btn-primary" ng-click="removeapp(app.id)">Hapus</button>
-        <button class="btn btn-primary" ng-click="installapp(app.id)">Upgrade</button>
-      </div>
+      <h3 align="center" class="page-header">Kategori Aplikasi</h3>
+      <div class="row">
+        <div class="col-md-3">
+        <a href="#/kategori/aksesoris"><img src="img/Komodo/categories/scalable/applications-accessories.svg" class="img-rounded"></a>
+          <h3>Aksesoris</h3>
+          <a type="button" class="btn btn-outline btn-lg" href="#/kategori/aksesoris">Lihat detail »</a>
+        </div>
+        <div class="col-md-3">
+          <a href="#/kategori/aksesoris"><img src="img/Komodo/categories/scalable/applications-internet.svg" class="img-rounded"></a>
+          <h3>Internet</h3>
+          <a type="button" class="btn btn-outline btn-lg" href="#/kategori/internet">Lihat detail »</a>
+        </div>
+        <div class="col-md-3">
+          <a href="#/kategori/aksesoris"><img src="img/Komodo/categories/scalable/applications-office.svg" class="img-rounded"></a>
+          <h3>Perkantoran</h3>
+          <a type="button" class="btn btn-outline btn-lg" href="#/kategori/office">Lihat detail »</a>
+        </div>
+        <div class="col-md-3">
+          <a href="#/kategori/aksesoris"><img src="img/Komodo/categories/scalable/applications-multimedia.svg" class="img-rounded"></a>
+          <h3>Sound &amp; Video</h3>
+          <a type="button" class="btn btn-outline btn-lg" href="#/kategori/audio">Lihat detail »</a>
+        </div> 
+      </div> 
+    </div>     
+  </script>
 
-      <div class="bs-docs-section col-md-6">
-        <h4>Pengembangan {{app.name}}</h4>
-        <div ng-repeat="url in app.url">{{url}}</div>
-        <h4>{{app.name}} dikembangkan oleh :</h4>
-        <ul><li ng-repeat="author in app.authors">
-          {{author}}
-        </li></ul>
+<!-- Script Aksesoris
+================================================== -->  
+  <script type="text/ng-template" id="aksesoris.html">
+    <div class="bs-docs-section">
+      <h2 align="center" class="page-header">Kategori Aksesoris</h2>
+        <div ng-repeat="app in apps | filter:{genre:'aksesoris'} | orderBy:'name'" class="thumb">
+          <a href="#/kategori/{{app.genre}}/detail/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}" height="42" width="42"></a>
+          <a href="#/kategori/{{app.genre}}/detail/{{app.id}}"><b>{{app.name}}</b></a>
+          <p>{{app.info}}</p>
+        </div>
+    </div>
+  </script>
+
+<!-- Script Internet
+================================================== -->  
+  <script type="text/ng-template" id="internet.html">
+    <div class="bs-docs-section">
+      <h2 align="center" class="page-header">Kategori Internet</h2>
+      <div ng-repeat="app in apps | filter:{genre:'internet'} | orderBy:'name'" class="thumb">
+        <a href="#/kategori/{{app.genre}}/detail/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}" height="42" width="42"></a>
+        <a href="#/kategori/{{app.genre}}/detail/{{app.id}}"><b>{{app.name}}</b></a>
+        <p>{{app.info}}</p>
+      </div>
+    </div>
+  </script>
+
+<!-- Script Office
+================================================== -->  
+  <script type="text/ng-template" id="office.html">
+    <div class="bs-docs-section">
+      <h2 align="center" class="page-header">Kategori Perkantoran</h2>
+      <div ng-repeat="app in apps | filter:{genre:'office'} | orderBy:'name'" class="thumb">
+        <a href="#/kategori/{{app.genre}}/detail/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}" height="42" width="42"></a>
+        <a href="#/kategori/{{app.genre}}/detail/{{app.id}}"><b>{{app.name}}</b></a>
+        <p>{{app.info}}</p>
+      </div>
+    </div>
+  </script>
+
+<!-- Script Audio
+================================================== -->  
+  <script type="text/ng-template" id="audio.html">
+    <div class="bs-docs-section">
+      <h2 align="center" class="page-header">Kategori Perkantoran</h2>
+      <div ng-repeat="app in apps | filter:{genre:'audio'} | orderBy:'name'" class="thumb">
+        <a href="#/kategori/{{app.genre}}/detail/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}" height="42" width="42"></a>
+        <a href="#/kategori/{{app.genre}}/detail/{{app.id}}"><b>{{app.name}}</b></a>
+        <p>{{app.info}}</p>
       </div>
     </div>
   </script>
@@ -160,6 +230,48 @@ Rilis   : Suroboyo 64-bit
     </div>
   </script>
 
+<!-- Script Detail Aplikasi
+================================================== --> 
+  <script type="text/ng-template" id="app-detail.html">
+    <div class="bs-docs-section">
+    <h3 align="center" class="page-header">Detail Aplikasi</h3>
+      <div class="bs-docs-section col-md-6">
+        <h3><img ng-src="{{app.imageUrl}}">  {{app.name}}<br><small>Versi: {{app.versi}}</small></h3>
+        <p>{{app.info}}</p>
+        <button class="btn btn-primary" ng-click="installapp(app.id)">Pasang</button>
+        <button class="btn btn-primary" ng-click="removeapp(app.id)">Hapus</button>
+        <button class="btn btn-primary" ng-click="installapp(app.id)">Upgrade</button>
+      </div>
+
+      <div class="bs-docs-section col-md-6">
+        <h4>Pengembangan {{app.name}}</h4>
+        <div ng-repeat="url in app.url">{{url}}</div>
+        <h4>{{app.name}} dikembangkan oleh :</h4>
+        <ul><li ng-repeat="author in app.authors">
+          {{author}}
+        </li></ul>
+      </div>
+    </div>
+  </script>
+
+<!-- Script Pencarian
+================================================== --> 
+  <script type="text/ng-template" id="cari.html">
+    <div class="bs-docs-section">
+    <h2 align="center" class="page-header">Pencarian</h2>
+      <div>
+        <form class="col-md-4">
+        <input ng-model="query" type="text" typeahead="deret for deret in derets | filter:$viewValue" class="form-control input-normal" placeholder="Pencarian...">
+        </form>
+      </div>
+    <h3 align="center" class="page-header"></h3>
+      <div ng-repeat="app in apps | filter:query | orderBy:'name'" class="thumb col-md-4">
+        <a href="#/detail/{{app.id}}" class="thumb"><img ng-src="{{app.imageUrl}}" height="42" width="42"></a>
+        <a href="#/detail/{{app.id}}"><b>{{app.name}}</b></a>
+      </div>
+    </div>
+  </script>
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -172,6 +284,7 @@ Rilis   : Suroboyo 64-bit
   <script src="lib/xeditable.js"></script>
   <script src="lib/ui-bootstrap-tpls-0.10.0.js"></script>
   <script src="lib/underscore.js"></script>
+  <script src="lib/ng-breadcrumbs.js"></script>
   
   <script src="js/app.js"></script>
   <script src="js/appjson.js"></script>
