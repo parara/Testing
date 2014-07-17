@@ -1,0 +1,5 @@
+cp /etc/apt/sources.list /etc/apt/sources.list.ori
+echo "## Repository BlankOn Suroboyo - Original" | tee /etc/apt/sources.list
+echo "deb http://repo.ugm.ac.id/blankon suroboyo main restricted extras extras-restricted" | tee -a /etc/apt/sources.list
+echo "deb http://repo.ugm.ac.id/blankon suroboyo-updates main restricted extras extras-restricted" | tee -a /etc/apt/sources.list
+echo "deb http://repo.ugm.ac.id/blankon suroboyo-security main restricted extras extras-restricted" | tee -a /etc/apt/sources.list

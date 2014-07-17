@@ -1,6 +1,6 @@
 'use strict';
 
-/* App Module 
+/* App Module
 Change
 phonecatApp => WarsiApp
 phonecatControllers => WarsiCtr
@@ -49,7 +49,7 @@ WarsiApp.config(['$routeProvider',
         controller: 'AppListCtr',
         label: 'Audio'
       }).
-      // testing 
+      // testing
       when('/kategori/aksesoris/detail/:appId', { //done
         templateUrl: 'app-detail.html',
         controller: 'AppDetailCtr',
