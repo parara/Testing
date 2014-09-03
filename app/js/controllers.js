@@ -6,7 +6,7 @@ var phonecatControllers = angular.module('phonecatControllers', []);
 
 phonecatControllers.controller('PhoneListCtrl', ['$scope', '$http',
   function($scope, $http) {
-    $http.get('http://panduan.blankonlinux.or.id/?json=get_category_posts&slug=multimedia&count=10&status=publish').success(function(data) {
+    $http.get('http://www.malioboro.org/?json=get_category_posts&slug=malioboro&count=10&status=publish').success(function(data) {
       $scope.phones = data;
     });
 
