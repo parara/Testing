@@ -1,0 +1,226 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css" />
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.4.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+</style>
+<div data-role="page" id="page" >
+
+	<div data-role="header" data-position="fixed">
+		<h1>PADUAN BLANKON</h1>
+		<a href="#mypanel" class="ui-btn ui-icon-bars  ui-btn-icon-notext ui-corner-all"></a>
+	</div>	
+	
+	<div role="main" class="ui-content"> 
+
+        <ul id="get-articles" data-role="listview" data-inset="true" data-filter="true">
+        	<script type="text/javascript">
+
+        	//to handle string format
+        	String.prototype.format = function() {
+			    var newStr = this, i = 0;
+			    while (/%s/.test(newStr))
+			        newStr = newStr.replace("%s", arguments[i++])
+
+			    return newStr;
+			}
+        	
+        	$.getJSON("http://panduan.blankonlinux.or.id/feed/json", function(result){
+        		for (i = 0; i < result.length; i++) { 
+
+        			list_articles = '<li get-url="%s" class="ui-last-child"><a href="#artikel" class="ui-btn ui-btn-icon-right ui-icon-carat-r"> <h2>%s</h2> <p>%s</p> </a></li>'.format(result[i].permalink, result[i].title, result[i].excerpt);
+
+        			$('#get-articles').append(list_articles);
+					
+					$(document).ready(function(){
+					   $("#get-articles li").click(function() {
+						 geturl = $(this).attr('get-url') + "json";
+						 $.getJSON(geturl, function(result){
+						 	document.getElementById("judul-artikel").innerHTML = result[0]["title"];
+						 	document.getElementById("date").innerHTML = result[0]["date"];
+						 	document.getElementById("author").innerHTML = result[0]["author"];
+						 	document.getElementById("content-artikel").innerHTML = result[0]["content"];
+						 	document.getElementById("kategori").innerHTML = result[0]["categories"];
+						 });
+						});
+					});
+				}
+			});	
+
+			
+
+        	</script>
+        </ul>
+    </div>
+
+
+	<div data-role="panel" id="mypanel">
+		<h1>KATEGORI</h1>
+		<ul data-role="listview">
+		    <li data-icon="camera"><a href="#">Desain</a></li>
+		    <li data-icon="grid"><a href="#">Destop</a></li>
+		    <li data-icon="navigation"><a href="#">Internet</a></li>
+		    <li data-icon="lock"><a href="#">Internet</a></li>
+		    <li data-icon="video"><a href="#">Multimedia</a></li>
+		    <li data-icon="edit"><a href="#">Pendidikan</a></li>
+		    <li data-icon="shop"><a href="#">Perkantoran</a></li>
+		    <li data-icon="recycle"><a href="#">Slide</a></li>
+		    <li data-icon="home"><a href="#">Umum</a></li>
+		</ul>
+	</div>
+
+
+	<div data-role="footer" data-position="fixed">
+		<nav data-role="navbar">
+			<ul>
+				<li><a href="#page" data-icon="home">Beranda</a>
+				<li><a href="#tentang" data-icon="star">Tentang</a>
+				<li><a href="#sponsor" data-icon="eye">Sponsor</a>
+			</ul>
+		</nav>
+	</div>
+
+</div>
+
+
+<!--ARTICLE-->
+
+<div data-role="page" id="artikel">
+	<div data-role="header" data-position="fixed">
+		<h1>PADUAN BLANKON</h1>
+		<a href="#page" class="ui-btn ui-icon-back  ui-btn-icon-notext ui-corner-all"></a>
+	</div>	
+
+	<div data-role="panel" id="mypanel">
+		<h1>KATEGORI</h1>
+		<ul data-role="listview">
+		    <li data-icon="camera"><a href="#">Desain</a></li>
+		    <li data-icon="grid"><a href="#">Destop</a></li>
+		    <li data-icon="navigation"><a href="#">Internet</a></li>
+		    <li data-icon="lock"><a href="#">Internet</a></li>
+		    <li data-icon="video"><a href="#">Multimedia</a></li>
+		    <li data-icon="edit"><a href="#">Pendidikan</a></li>
+		    <li data-icon="shop"><a href="#">Perkantoran</a></li>
+		    <li data-icon="recycle"><a href="#">Slide</a></li>
+		    <li data-icon="home"><a href="#">Umum</a></li>
+		</ul>
+	</div>
+
+	<div role="main" class="ui-content"> 
+		<h2><u id="judul-artikel"></u></h2>
+		<b id="date"></b> - <b>author  : <span id="author"></span></b><br>
+		<b> Kategori : <span id="kategori"></span></b> </b><br><br>
+
+		<div id="content-artikel">
+
+		</div>
+	</div>
+
+
+	<div data-role="footer" data-position="fixed">
+		<nav data-role="navbar">
+			<ul>
+				<li><a href="#page" data-icon="home">Beranda</a>
+				<li><a href="#tentang" data-icon="star">Tentang</a>
+				<li><a href="#sponsor" data-icon="eye">Sponsor</a>
+			</ul>
+		</nav>
+	</div>
+
+</div>
+
+<!--TENTANG-->
+
+<div data-role="page" id="tentang">
+	<div data-role="header" data-position="fixed">
+		<h1>PADUAN BLANKON</h1>
+		<a href="#mypanel" class="ui-btn ui-icon-bars  ui-btn-icon-notext ui-corner-all"></a>
+	</div>	
+
+	<div data-role="panel" id="mypanel">
+		<h1>KATEGORI</h1>
+		<ul data-role="listview">
+		    <li data-icon="camera"><a href="#">Desain</a></li>
+		    <li data-icon="grid"><a href="#">Destop</a></li>
+		    <li data-icon="navigation"><a href="#">Internet</a></li>
+		    <li data-icon="lock"><a href="#">Internet</a></li>
+		    <li data-icon="video"><a href="#">Multimedia</a></li>
+		    <li data-icon="edit"><a href="#">Pendidikan</a></li>
+		    <li data-icon="shop"><a href="#">Perkantoran</a></li>
+		    <li data-icon="recycle"><a href="#">Slide</a></li>
+		    <li data-icon="home"><a href="#">Umum</a></li>
+		</ul>
+	</div>
+
+	<div role="main" class="ui-content"> 
+		<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+	</div>
+
+
+	<div data-role="footer" data-position="fixed">
+		<nav data-role="navbar">
+			<ul>
+				<li><a href="#page" data-icon="home">Beranda</a>
+				<li><a href="#tentang" data-icon="star">Tentang</a>
+				<li><a href="#sponsor" data-icon="eye">Sponsor</a>
+			</ul>
+		</nav>
+	</div>
+
+</div>
+
+<!--SPONSOR-->
+
+<div data-role="page" id="sponsor">
+	<div data-role="header" data-position="fixed">
+		<h1>PADUAN BLANKON</h1>
+		<a href="#mypanel" class="ui-btn ui-icon-bars  ui-btn-icon-notext ui-corner-all"></a>
+	</div>	
+
+	<div data-role="panel" id="mypanel">
+		<h1>KATEGORI</h1>
+		<ul data-role="listview">
+		    <li data-icon="camera"><a href="#">Desain</a></li>
+		    <li data-icon="grid"><a href="#">Destop</a></li>
+		    <li data-icon="navigation"><a href="#">Internet</a></li>
+		    <li data-icon="lock"><a href="#">Internet</a></li>
+		    <li data-icon="video"><a href="#">Multimedia</a></li>
+		    <li data-icon="edit"><a href="#">Pendidikan</a></li>
+		    <li data-icon="shop"><a href="#">Perkantoran</a></li>
+		    <li data-icon="recycle"><a href="#">Slide</a></li>
+		    <li data-icon="home"><a href="#">Umum</a></li>
+		</ul>
+	</div>
+
+	<div role="main" class="ui-content"> 
+
+        <ul data-role="listview" data-inset="true">
+        	<li><a href="#panorama">
+            	<img src="images/gimp-300x223.png" class="ui-li-thumb">
+            	<h2>Radnet</h2>
+                <p>Gambaran pemandangan keindahan alam seringkali memukau untuk kita simak. Namun adakalanya kita tidak memiliki peralatan yang cukup canggih untuk mengabadikannya</p>
+            </a></li>
+        </ul>
+    </div>
+
+
+	<div data-role="footer" data-position="fixed">
+		<nav data-role="navbar">
+			<ul>
+				<li><a href="#page" data-icon="home">Beranda</a>
+				<li><a href="#tentang" data-icon="star">Tentang</a>
+				<li><a href="#" data-icon="eye">Sponsor</a>
+			</ul>
+		</nav>
+	</div>
+
+</div>
+
+</body>
+</html>
